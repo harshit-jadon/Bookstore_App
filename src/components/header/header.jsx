@@ -1,8 +1,8 @@
 import React from 'react';
-import 'C:/Users/harshit.jadon.MD-CJDKE06555KH/Desktop/Bookstore App/bookstore-app/src/components/header/header.scss';
-import bookStoreLogo from 'C:/Users/harshit.jadon.MD-CJDKE06555KH/Desktop/Bookstore App/bookstore-app/src/assests/images/education.svg';
-import cartLogo from 'C:/Users/harshit.jadon.MD-CJDKE06555KH/Desktop/Bookstore App/bookstore-app/src/assests/images/supermarket.svg';
-import searchLogo from 'C:/Users/harshit.jadon.MD-CJDKE06555KH/Desktop/Bookstore App/bookstore-app/src/assests/images/ic_zoom_out_24px.svg';
+import '../header/header.scss';
+import bookStoreLogo from '../../assests/images/education.svg';
+import cartLogo from '../../assests/images/supermarket.svg';
+import searchLogo from '../../assests/images/ic_zoom_out_24px.svg';
 
 export default function Header() {
     return (

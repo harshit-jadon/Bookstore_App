@@ -1,12 +1,20 @@
-import Header from 'C:/Users/harshit.jadon.MD-CJDKE06555KH/Desktop/Bookstore App/bookstore-app/src/components/header/header.jsx';
-import Footer from 'C:/Users/harshit.jadon.MD-CJDKE06555KH/Desktop/Bookstore App/bookstore-app/src/components/footer/footer.jsx';
-
+import BookCard from "./components/card/card.jsx";
+import HomePage from './components/home-page/home-page.jsx';
+import { BrowserRouter, Switch,Route } from "react-router-dom";
 function App() {
   return (
-    <>
-    <Header />
-    <Footer />
-     </>
+    <div className="App">
+    <BrowserRouter>
+    <Switch>
+      <Route exact path="/BookCard">
+        <BookCard />
+      </Route>
+      <Route exact path="/homepage">
+        <HomePage/>
+      </Route>
+    </Switch>
+    </BrowserRouter>
+    </div>
   );
 }
 
