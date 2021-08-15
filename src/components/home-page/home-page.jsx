@@ -4,30 +4,40 @@ import Card from '../card/card.jsx';
 import Header from '../header/header';
 import Foot from '../footer/footer';
 import BookStoreService from '../../service/BookStoreService';
-import Bookdata from './bookData';
 class HomePage extends React.Component{
 
     constructor(props){
-        console.log(Bookdata)
         super(props);
         this.state = {
             bookData : []
         };
         this.bookStoreService = new BookStoreService();
     }
+    getBooks=()=>{
+        this.bookStoreService.getAllBooks()
+            .then(responseDTO => {
+                let responseData = responseDTO;
+                console.log("Data received after GET Call :\n" + responseData.data);
+                this.setState({bookData: responseData.data},()=>console.log(this.state.bookData));
+            }).catch(errror => {
+            console.log("Error while fetching Employee List\nError : " + JSON.stringify(errror));
+        })
+    }
+    componentDidMount() {
+        this.getBooks()
+        console.log(this.state.bookData)
+    }
+
+
 
     render() {
         return(
             <>
             <Header/>
             <div className="book-details">
-                <h3 className="heading">Books <span>{Bookdata.length}</span></h3>
-                
+                <h3 className="heading">Books <span>{this.state.bookData.length}</span></h3>
                 <div style={{  display: "grid",gridTemplateColumns: "auto auto auto auto",justifyContent: "space-evenly",gridRowGap:30}}>
-                {Bookdata.map(book=>(
-                    
-                     <Card props={book} />
-                ))}
+                     <Card bookDetails={this.state.bookData} />
                 </div>
             </div>
             <Foot/>
