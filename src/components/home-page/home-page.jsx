@@ -35,8 +35,8 @@ class HomePage extends React.Component{
             <>
             <Header/>
             <div className="book-details">
-                <h3 className="heading">Books <span>{this.state.bookData.length}</span></h3>
-                <div style={{  display: "grid",gridTemplateColumns: "auto auto auto auto",justifyContent: "space-evenly",gridRowGap:30}}>
+                <h3 className="heading">Books<span className="book-count">({this.state.bookData.length} Items)</span></h3>
+                <div className="cards-layout">
                      <Card bookDetails={this.state.bookData} />
                 </div>
             </div>
