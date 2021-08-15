@@ -13,7 +13,7 @@ export default function Header() {
         }
     }
     return (
-        <div>
+        <div className='sidebar'>
            <header class='header-content'>
                 <div class = 'logo-bookstore'>
                     <img src={bookStoreLogo} alt ='bookStorelogo'/>

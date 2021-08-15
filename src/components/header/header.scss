@@ -56,3 +56,8 @@ span{
     cursor: pointer;
 }
 
+.sidebar {
+    position: -webkit-sticky;  // required for Safari
+    position: sticky;
+    top: 0; // required as well.
+}

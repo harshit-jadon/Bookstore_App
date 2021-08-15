@@ -55,7 +55,6 @@ function BookCard(props){
 
                     </div>
                     </HtmlTooltip>
-
                 </div>
             ))
             }
