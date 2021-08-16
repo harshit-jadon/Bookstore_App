@@ -1,6 +1,5 @@
 import React from 'react'
 import './MyCart.scss';
-import bookpic from '../../assests/images/bookpic.png';
 import BookDetails from './BookDetails';
 
 export default function MyCart() {
@@ -21,12 +20,6 @@ export default function MyCart() {
                                 <BookDetails book={book}/>
                             </div>
                         </div>
-                    <div className='increase-decrease'>
-                    <div className="value-button" id="decrease" value="Decrease Value">-</div>
-                    <input type="text" id="number" value="1" className='incDecNumber'/>
-                    <div className="value-button" id="increase" onClick="increaseValue()" value="Increase Value">+</div>
-                    <button className='remove'>Remove</button>
-                    </div>
                         </>
                     ))
                 }

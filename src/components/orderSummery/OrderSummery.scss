@@ -1,6 +1,5 @@
-.other-div{
+.other-summerydiv{
     border:2px solid #DCDCDC;
-
     text-align: left;
     color: #333232;
     letter-spacing: 0px;
@@ -9,21 +8,28 @@
     margin-right: 30%;
     margin-top: 3%;
 }
-.my-ordercart{
-    font: normal normal normal 15px/18px Lato;
+.my-summeryordercart{
+    font: normal normal bold 18px/22px Lato;
     letter-spacing: 0px;
-    color: #333232;
+    color: #0A0102;
     opacity: 1;
     margin-left: 3%;
     margin-top: 2%;
 }
-.cart-details{
+.cart-summerydetails{
     display: flex;
-    justify-content: start;
+    flex-direction: row;
+    align-items:flex-start;
     margin-top: 40px;
-    margin-left: 36px;
+    margin-left: 130px;
 }
-.book-details{
+.card-summeryimg {
+    height: 70%;
+    width: 85px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+.book-summerydetails{
     display: flex;
     flex-direction: column;
     line-height:20px;
@@ -33,28 +39,29 @@
     opacity: 1;
     margin-left:3%;
 }
-.book-title{
+.book-summerytitle{
     font: normal normal bold 14px/17px Lato;
     color: #0A0102;
     margin-bottom: 10px;
 }
-.author{
-    font: normal normal normal 10px/12px Lato;
+.authorsummery{
+    font: normal normal bold 10px/12px Lato;
     color: #9D9D9D;
     margin-bottom: 10px;
 }
-.price{
+.pricesummery{
     font: normal normal bold 15px/18px Lato;
     color: #0A0102;
 }
 
-.placeButton{
-    margin-left: 84%;
-  margin-bottom: 10px;
-
+.placeSummeryButton{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    margin-bottom: 30px;
 }
 
-.placed-button{
+.placed-summerybutton{
     background: #3371B5 0% 0% no-repeat padding-box;
     border-radius: 3px; 
     border:none;
@@ -69,12 +76,3 @@
     height: 35px;
 }
 
-.card-img {
-    width: 30%;
-    min-height: 40%;
-    margin-left: 85px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    opacity: 1;
-}
