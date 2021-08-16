@@ -1,54 +1,50 @@
-.header-content{
-    display:flex;
+.header-content {
+    display: flex;
     flex-direction: row;
-    background-color:#A03037 ;
-    justify-content:space-evenly;
+    background-color: #a03037;
+    justify-content: space-evenly;
     align-items: center;
-    height:60px;
+    height: 60px;
     width: 100%;
 }
-.logo-bookstore{
+.logo-bookstore {
     font: normal normal normal 22px/26px Roboto;
-    color: #FFFFFF;
+    color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
 }
-span{
+span {
     margin-left: 10px;
     margin-right: 10px;
     letter-spacing: 1.5px;
 }
-.anchor{
+.anchor {
     display: flex;
-    background-color:#FFFFFF;
+    background-color: #ffffff;
     align-items: center;
     border-radius: 3px;
-
 }
-.search-logo{
+.search-logo {
     height: 14px;
     margin-left: 20px;
-
 }
-.search-bar{
-    width:600px;
+.search-bar {
+    width: 600px;
     height: 33px;
     padding-left: 10px;
     border: none;
     outline: none;
     border-radius: 3px;
-
 }
-::placeholder{
-    color: #9D9D9D;
+::placeholder {
+    color: #9d9d9d;
 }
 
-.cart-logo{
+.cart-logo {
     font: normal normal normal 20px/26px Roboto;
-    color: #FFFFFF;
+    color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -56,3 +52,18 @@ span{
     cursor: pointer;
 }
 
+.cart-count {
+    top: 19px;
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    background: #ffffff;
+    text-align: center;
+    vertical-align: top;
+    font: normal normal bold 12px/14px Lato;
+    letter-spacing: 0px;
+    color: #A03037;
+    margin-left: -9px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}

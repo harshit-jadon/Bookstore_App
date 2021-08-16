@@ -5,6 +5,15 @@ import cartLogo from '../../assests/images/supermarket.svg';
 import searchLogo from '../../assests/images/ic_zoom_out_24px.svg';
 
 export default function Header() {
+
+    const cartSize=()=>{
+        const cart=JSON.parse(localStorage.getItem("cart"))
+        if(cart) {
+            console.log(cart.length)
+            return cart.length
+        }
+    }
+
     return (
         <div>
            <header class='header-content'>
@@ -18,7 +27,7 @@ export default function Header() {
                 </div>
                 <div class='cart-logo'>
                     <span>Cart</span>
-                    <img src={cartLogo} alt='cartLogo'/>
+                    <img src={cartLogo} alt='cartLogo'/><span className="cart-count">{cartSize()}</span>
                 </div>
            </header>
         </div>
