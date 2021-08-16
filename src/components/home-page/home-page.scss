@@ -2,18 +2,19 @@
 .heading {
     text-align: left;
     font: normal normal bold 25px/30px Lato;
-    margin-left: 150px;
+    margin-left: 10%;
     font-size: 1.5rem;
 }
 
 .cards-layout {
     display: grid;
     grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
     justify-content: space-around;
-    grid-row-gap: 20px;
-    grid-column-gap: 50px;
-    padding-left: 150px;
-    padding-right: 150px;
+    grid-row-gap: 2%;
+    grid-column-gap: 2.5%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .book-count {
@@ -24,11 +25,19 @@
     color: #9d9d9d;
     opacity: 1;
 }
-.MuiPagination-ul {
+.MuiPagination-ul{
     display: flex;
-    padding: 0;
-    flex-wrap: wrap;
-    list-style: none;
-    align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 200px){
+    .cards-layout{
+        grid-template-columns: auto;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .cards-layout{
+        grid-template-columns: auto auto;
+    }
 }

@@ -15,7 +15,7 @@ export default function MyCart() {
                         <>
                         <div className='cart-details'>
                             <div>
-                                <img src={book.image} alt='bookpic'className="card-img"/>
+                                <img src={book.image} alt='bookpic'/>
                             </div>
                             <div className='details-div'>
                                 <BookDetails book={book}/>
