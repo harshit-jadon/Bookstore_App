@@ -14,7 +14,10 @@ export default function MyCart() {
                     <div>
                         <img src={bookpic} alt='bookpic'/>
                     </div>
-                <div>{BookDetails}</div>
+                    <div className='details-div'>
+                    <BookDetails></BookDetails>
+                    </div>
+                
                 </div>
                 <div className='increase-decrease'>
                     <div class="value-button" id="decrease" value="Decrease Value">-</div>

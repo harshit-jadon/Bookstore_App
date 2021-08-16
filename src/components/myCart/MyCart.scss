@@ -23,12 +23,16 @@
     margin-top: 40px;
     margin-left: 36px;
 }
+.details-div{
+    margin-left: 3%;
 
+}
 .increase-decrease{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     margin-left: 13%;
+    margin-top: 2%;
     height: 24px;
 }
 
@@ -53,7 +57,7 @@
   }
 .remove{
     text-align: center;
-    font: normal normal normal 14px/12px Lato;
+    font: normal normal bold 15px/13px Lato;
     letter-spacing: 0px;
     color: #0A0102;
     opacity: 1;
@@ -63,7 +67,8 @@
     margin-left:10px ;
     background-color: #FFFFFF;
     outline: none;
-    border: none;
+    border:none;
+    margin-bottom: 0.5%;
 }
 .placeButton{
     margin-left: 84%;
