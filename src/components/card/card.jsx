@@ -37,23 +37,23 @@ function BookCard(props){
             { props.bookDetails.map((book)=>(
                 <div className="book-cards" >
                     <HtmlTooltip title={book.description} placement={"right-start"}>
-                    <div className="book-card" onMouseEnter={() => {
-                        setIsShown(true)
-                        setShownElement(book.id)
-                    }}
-                         onMouseLeave={() => setIsShown(false)}>
-                        <img src={book.image} alt="" className="card-img"/>
-                        <div className="book-info">
-                            <h3 className="book-title">{book.title}</h3>
-                            <span className="text">by {book.author}</span>
-                            <h4 className="book-price">Rs. {book.price}</h4>
-                            <div className="buttons">
-                                <button className="button-cart" onClick={()=>addToCart(book)}>ADD TO CART</button>
-                                <button className="button-wishlist">WISHLIST</button>
+                        <div className="book-card" onMouseEnter={() => {
+                            setIsShown(true)
+                            setShownElement(book.id)
+                        }}
+                             onMouseLeave={() => setIsShown(false)}>
+                            <img src={book.image} alt="" className="card-img"/>
+                            <div className="book-info">
+                                <h3 className="book-title">{book.title}</h3>
+                                <span className="text">by {book.author}</span>
+                                <h4 className="book-price">Rs. {book.price}</h4>
+                                <div className="buttons">
+                                    <button className="button-cart" onClick={()=>addToCart(book)}>ADD TO CART</button>
+                                    <button className="button-wishlist">WISHLIST</button>
+                                </div>
                             </div>
-                        </div>
 
-                    </div>
+                        </div>
                     </HtmlTooltip>
                 </div>
             ))

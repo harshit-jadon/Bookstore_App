@@ -10,21 +10,27 @@ export default function MyCart() {
                 <div className='my-cart'>
                     <span>My Cart(2)</span>
                 </div>
-                <div className='cart-details'>
-                    <div>
-                        <img src={bookpic} alt='bookpic'/>
-                    </div>
-                    <div className='details-div'>
-                    <BookDetails></BookDetails>
-                    </div>
-                
-                </div>
-                <div className='increase-decrease'>
-                    <div class="value-button" id="decrease" value="Decrease Value">-</div>
+                {
+                    JSON.parse(localStorage.getItem("cart")).map((book)=>(
+                        <>
+                        <div className='cart-details'>
+                            <div>
+                                <img src={book.image} alt='bookpic'className="card-img"/>
+                            </div>
+                            <div className='details-div'>
+                                <BookDetails book={book}/>
+                            </div>
+                        </div>
+                    <div className='increase-decrease'>
+                    <div className="value-button" id="decrease" value="Decrease Value">-</div>
                     <input type="text" id="number" value="1" className='incDecNumber'/>
-                    <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                    <div className="value-button" id="increase" onClick="increaseValue()" value="Increase Value">+</div>
                     <button className='remove'>Remove</button>
-                </div>
+                    </div>
+                        </>
+                    ))
+                }
+
                 <div className='placeButton'>
                     <button className='placed-button'>place order</button>
                 </div>

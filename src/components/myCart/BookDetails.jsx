@@ -1,13 +1,14 @@
 import React from 'react'
 import './BookDetails.scss';
 
-export default function BookDetails() {
+export default function BookDetails(props) {
     return (
-        <div>   
+        <div>
+
             <div className='book-details'>
-                        <span className='book-title'>Don't Make Me Think</span>
-                        <span className='author'>by Steve Krug</span>
-                        <span className='price'> Rs.1500</span>
+                        <span className='book-title'>{props.book.title}</span>
+                        <span className='author'>{props.book.author}</span>
+                        <span className='price'> {props.book.price}</span>
                     </div>
         </div>
     )
