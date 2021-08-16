@@ -4,6 +4,8 @@ import Card from '../card/card.jsx';
 import Header from '../header/header';
 import Foot from '../footer/footer';
 import BookStoreService from '../../service/BookStoreService';
+import Pagination from '@material-ui/lab/Pagination';
+
 class HomePage extends React.Component{
 
     constructor(props){
@@ -40,7 +42,8 @@ class HomePage extends React.Component{
                      <Card bookDetails={this.state.bookData} />
                 </div>
             </div>
-            <Foot/>
+                <Pagination count={10} />
+                <Foot/>
             </>
         )
     }

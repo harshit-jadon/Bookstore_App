@@ -52,6 +52,7 @@ span {
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .cart-count {
     top: 19px;
     width: 15px;
@@ -67,3 +68,10 @@ span {
     border-radius: 20px;
     margin-bottom: 16px;
 }
+=======
+.sidebar {
+    position: -webkit-sticky;  // required for Safari
+    position: sticky;
+    top: 0; // required as well.
+}
+>>>>>>> 5dc5bfd5af265a2e773fb2eebedd6ab83be49bd9
