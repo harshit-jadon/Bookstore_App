@@ -1,0 +1,24 @@
+.book-details{
+    display: flex;
+    flex-direction: column;
+    line-height:20px;
+    text-align: left;
+    letter-spacing: 0px;
+    color: #0A0102;
+    opacity: 1;
+    margin-left:3%;
+}
+.book-title{
+    font: normal normal bold 14px/17px Lato;
+    color: #0A0102;
+    margin-bottom: 10px;
+}
+.author{
+    font: normal normal normal 10px/12px Lato;
+    color: #9D9D9D;
+    margin-bottom: 10px;
+}
+.price{
+    font: normal normal bold 15px/18px Lato;
+    color: #0A0102;
+}

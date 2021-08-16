@@ -24,3 +24,11 @@
     color: #9d9d9d;
     opacity: 1;
 }
+.MuiPagination-ul {
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}

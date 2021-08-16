@@ -1,0 +1,87 @@
+.other-div{
+    border:2px solid #DCDCDC;
+
+    text-align: left;
+    color: #333232;
+    letter-spacing: 0px;
+    opacity: 1;
+    margin-left: 12%;
+    margin-right: 30%;
+    margin-top: 3%;
+}
+.my-cart{
+    font: normal normal bold 18px/22px Lato;
+    letter-spacing: 0px;
+    color: #0A0102;
+    opacity: 1;
+    margin-left: 3%;
+    margin-top: 2%;
+}
+.cart-details{
+    display: flex;
+    justify-content: start;
+    margin-top: 40px;
+    margin-left: 36px;
+}
+
+.increase-decrease{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-left: 13%;
+    height: 24px;
+}
+
+.value-button {
+    display: inline-block;
+    border: 2px solid #DBDBDB;
+    height: 24px;
+    width:24px;
+    text-align: center;
+    vertical-align: middle;
+    background: #FAFAFA;
+    border-radius: 50%;
+  }
+  .incDecNumber{
+    text-align: center;
+    border: 2px solid #DBDBDB;
+    width: 41px;
+    height: 24px;
+    margin-left: 4px;
+    margin-right: 4px;
+    outline: none;
+  }
+.remove{
+    text-align: center;
+    font: normal normal normal 14px/12px Lato;
+    letter-spacing: 0px;
+    color: #0A0102;
+    opacity: 1;
+    height: 15px;
+    width: 55px;
+    cursor: pointer;
+    margin-left:10px ;
+    background-color: #FFFFFF;
+    outline: none;
+    border: none;
+}
+.placeButton{
+    margin-left: 84%;
+  margin-bottom: 10px;
+
+}
+
+.placed-button{
+    background: #3371B5 0% 0% no-repeat padding-box;
+    border-radius: 3px; 
+    border:none;
+    text-align: center;
+    font: normal normal medium 14px/17px Lato;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+    height: 35px;
+    cursor: pointer;
+    width: 151px;
+    height: 35px;
+}
