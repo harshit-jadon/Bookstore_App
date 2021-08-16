@@ -9,10 +9,10 @@ function App() {
     <BrowserRouter>
     <Switch>
       <Route exact path="/homepage">
-        <BookCard />
+        <HomePage />
       </Route>
       <Route exact path="/BookCard">
-        <HomePage/>
+        <BookCard/>
       </Route>
       <Route exact path='/page3'>
         <Page3 />

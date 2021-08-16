@@ -11,8 +11,7 @@ class HomePage extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            bookData : [],
-            loading:true
+            bookData : []
         };
         this.bookStoreService = new BookStoreService();
     }
@@ -22,11 +21,9 @@ class HomePage extends React.Component{
 
                 let responseData = responseDTO;
                 console.log("Data received after GET Call :\n" + responseData.data);
-                this.setState({bookData: responseData.data},()=>this.setState({loading:false}));
+                this.setState({bookData: responseData.data},);
             }).catch(errror => {
             console.log("Error while fetching Employee List\nError : " + JSON.stringify(errror));
-        }).finally(()=>{
-            this.setState({loading:true})
         })
     }
 
@@ -44,10 +41,7 @@ class HomePage extends React.Component{
                 <div className="book-details">
                     <h3 className="heading">Books<span className="book-count">({this.state.bookData.length} Items)</span></h3>
                     <div className="cards-layout">
-                        {
-                            !this.state.loading && (
-                            <Card bookDetails={this.state.bookData} />)
-                        }
+                            <Card bookDetails={this.state.bookData} />
 
                     </div>
                 </div>
