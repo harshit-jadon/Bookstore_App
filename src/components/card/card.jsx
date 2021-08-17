@@ -48,7 +48,7 @@ function BookCard(props){
                                 <span className="text">by {book.author}</span>
                                 <h4 className="book-price">Rs. {book.price}</h4>
                                 <div className="buttons">
-                                    <button className="button-cart" onClick={()=>addToCart(book)}>ADD TO CART</button>
+                                    <button className="button-cart" onClick={()=>addToCart(book)}>ADD TO BAG</button>
                                     <button className="button-wishlist">WISHLIST</button>
                                 </div>
                             </div>

@@ -19,6 +19,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-left: 4.7%;
 }
 span {
     margin-left: 10px;
@@ -71,4 +72,20 @@ span {
     margin-left: -9px;
     border-radius: 20px;
     margin-bottom: 16px;
+}
+
+@media screen and (max-width: 200px) {
+    .header-content{
+        width: 50%;
+    }
+
+    .search-bar{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .header-content{
+        width: 20%;
+    }
 }
