@@ -2,7 +2,7 @@ import React from 'react'
 import './MyCart.scss';
 import BookDetails from './BookDetails';
 
-export default function MyCart() {
+export default function MyCart(props) {
     return (
         <div className='main-div'>
             <div className='other-div'>
@@ -25,7 +25,7 @@ export default function MyCart() {
                 }
 
                 <div className='placeButton'>
-                    <button className='placed-button'>place order</button>
+                    <button className='placed-button' onClick={()=>props.openAddress(true)}>place order</button>
                 </div>
             </div>
         </div>
