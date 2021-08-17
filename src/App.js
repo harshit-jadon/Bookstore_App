@@ -1,8 +1,9 @@
-import BookCard from "./components/card/card.jsx";
 import HomePage from './components/home-page/home-page.jsx';
-
-import {BrowserRouter, Switch, Route} from "react-router-dom";
+import BookCard from "./components/card/card.jsx";
 import Page3 from './components/page3/Page3';
+import OrderPlaced from './components/orderPlaced/OrderPlaced';
+import {BrowserRouter, Switch, Route} from "react-router-dom";
+
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
       <Route exact path="/BookCard" component={BookCard}>
       </Route>
       <Route exact path='/page3' component={Page3}>
+      </Route>
+      <Route exact path="/orderPlaced" component={OrderPlaced}>
       </Route>
     </Switch>
     </BrowserRouter>
