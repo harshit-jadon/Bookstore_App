@@ -42,7 +42,6 @@ class HomePage extends React.Component{
                     <h3 className="heading">Books<span className="book-count">({this.state.bookData.length} Items)</span></h3>
                     <div className="cards-layout">
                             <Card bookDetails={this.state.bookData} />
-
                     </div>
                 </div>
                 <Pagination count={10} />
