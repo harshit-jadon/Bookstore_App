@@ -6,17 +6,14 @@ function BookCard(props){
 
     const[text,setText] = useState("ADD TO BAG");
     const[wishlistButton, setWishlistButton] = useState(true);
-
-    const handleStateChange = () =>{
-        setText("ADDED TO BAG")
-        setWishlistButton(false)
-    }
     function addToCart(book) {
         // var carts=[]
         // if(JSON.parse(localStorage.getItem('book'))!==null)
         //     carts.push(JSON.parse(localStorage.getItem('book')))
         // carts.push(book)
         // localStorage.setItem("books",JSON.stringify(carts))
+        setText("ADDED TO BAG")
+        setWishlistButton(false)
         let cart = JSON.parse(localStorage.getItem("cart"));
         if(cart){
             let books = cart.find(bookData => bookData.id===book.id);

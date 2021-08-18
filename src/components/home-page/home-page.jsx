@@ -38,12 +38,23 @@ class HomePage extends React.Component{
         return(
             <>
                 <Header/>
-                <div className="book-details">
+                <div className="books-sort">
                     <h3 className="heading">Books<span className="book-count">({this.state.bookData.length} Items)</span></h3>
+                        <div className="book-sort">
+                            <div className="sort">
+                                <select className="sort-box">
+                                    <option selected value="dafault">Sort by relevence</option>
+                                    <option value="Price:Low to High">Price:Low to High</option>
+                                    <option value="Price:High to Low">Price:High to Low</option>
+                                    <option value="Newest Arrival">Newest Arrival</option>
+                                </select>
+                        </div>
+                    </div>
+                </div>
                     <div className="cards-layout">
                             <Card bookDetails={this.state.bookData} />
                     </div>
-                </div>
+                    <div className="book-details"></div>
                 <Pagination count={10} />
                 <Foot/>
             </>
