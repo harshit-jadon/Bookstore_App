@@ -1,5 +1,5 @@
 import React from 'react';
-import '../lastPage/LastPage.scss';
+import './LastPage.scss';
 import Successfully from '../../assests/images/Group 4132.svg';
 
 

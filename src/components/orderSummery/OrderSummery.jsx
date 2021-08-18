@@ -1,7 +1,12 @@
 import React from 'react'
 import './OrderSummery.scss';
+import {useHistory} from "react-router-dom";
 
 export default function MyCart(props) {
+    let history=useHistory()
+    function navigate(path) {
+        history.push(`${path}`)
+    }
     return (
         <div>
             <div className='other-summerydiv'>
@@ -27,7 +32,7 @@ export default function MyCart(props) {
 
 
                 <div className='placeSummeryButton'>
-                    <button className='placed-summerybutton'>checkout</button>
+                    <button className='placed-summerybutton' onClick={()=>navigate('/orderplaced')}>checkout</button>
                 </div>
                 </>
                 }
