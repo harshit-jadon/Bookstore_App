@@ -11,20 +11,20 @@ export default function customerDetails(props) {
             {props.isOpen &&
             <>
                 <div className='input-div'>
-                    <div>
-                        <TextField label="Name" id="outlined-size-normal" variant="outlined"/>
-                        <TextField label="Phone number" id="outlined-size-normal" variant="outlined"/>
+                <div>
+                        <TextField  style={{ margin: 8, width: 250 }} label="Name" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8 , width: 250}} label="Phone number" id="outlined-size-normal" variant="outlined"/>
                     </div>
                     <div>
-                        <TextField label="Pincode" id="outlined-size-normal" variant="outlined"/>
-                        <TextField label="Locality" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8, width: 250 }} label="Locality" id="outlined-size-normal" variant="outlined"/>
                     </div>
                     <div>
-                        <TextField label="Address" id="outlined-size-normal" variant="outlined"/>
+                        <TextField style={{ margin: 8 , width: 517}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined"/>
                     </div>
                     <div>
-                        <TextField label="city/town" id="outlined-size-normal" variant="outlined"/>
-                        <TextField label="Landmark" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8 , width: 250}} label="city/town" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8 , width: 250}} label="Landmark" id="outlined-size-normal" variant="outlined"/>
                     </div>
                 </div>
                 <div className='radioDiv'>
@@ -48,7 +48,7 @@ export default function customerDetails(props) {
                 </div>
 
                 <div className='placeButton-cd'>
-                <button className='placed-button-cd' onClick={()=>props.openSummary(true)}>place order</button>
+                <button className='placed-button-cd' onClick={()=>props.openSummary(true)}>continue</button>
                 </div>
             </>
             }
