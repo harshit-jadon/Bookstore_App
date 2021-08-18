@@ -1,0 +1,91 @@
+.body-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+.successfully-content{
+     text-align: center;
+     margin-top: 5%;
+ }
+ .message-div{
+    font: normal normal bold 30px/40px Lato;
+    text-transform: capitalize;
+    opacity: 1;
+
+     transform: translate(0%, -240%);
+ }
+
+ .confirm-message{
+    text-align: center;
+    font: normal normal bold 20px/24px Lato;
+    letter-spacing: 0px;
+    color: #333232;
+    opacity: 1;
+    width: 17%;
+    margin-left:42%;  
+ }
+ .confirm-message-p{
+    font: normal normal bold 20px/24px Lato;
+    color: #333232;
+    line-height: 25px;
+ }
+ 
+.table-content{
+    width: 50%;
+    margin-top:3%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-collapse: collapse;
+}
+tr,td{
+    border: 2px solid #DCDCDC;
+}
+th{
+    height: 45px;
+}
+td{
+    height: 70px;
+    width: 33%;
+  
+}
+.table-head{
+    background-color: #FAFAFA;
+    text-align: center;
+    font: normal normal medium 12px/15px Lato;
+    letter-spacing: 0px;
+    color: #333232;
+    opacity: 1;
+    line-height: 42px;
+    padding:5px;
+}
+.table-row{
+    text-align: center;
+    font: normal normal medium 12px/15px Lato;
+    letter-spacing: 0px;
+    color: #333232;
+    opacity: 1;
+    line-height: 70px;
+    padding:10px;
+}
+.placeLPButton{
+    display: flex;
+    justify-content: center;
+
+}
+.placed-LPbutton{
+    background: #3371B5 0% 0% no-repeat padding-box;
+    border-radius: 3px; 
+    border:none;
+    text-align: center;
+    font: normal normal bold 14px/17px Lato;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+    height: 40px;
+    cursor: pointer;
+    width: 225px;
+    margin-top: 2.5%;
+    margin-bottom: 3%;
+    letter-spacing: 1.5px;
+}
