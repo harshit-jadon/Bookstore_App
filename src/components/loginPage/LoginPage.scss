@@ -1,8 +1,8 @@
-.body-div{
+.body-lp-div{
     height:100vh;
     min-height: 700px;;
 }
-.main-div{
+.main-lp-div{
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -19,7 +19,7 @@
 
 }
   
-img{
+.img-lp{
     margin-left:20%;
     margin-top: 4%;
     margin-right: 4%;
@@ -27,23 +27,20 @@ img{
     border-bottom-right-radius: 50px;
     transform: translate(4%, 2%);
 }
-img:hover{
+.img-lp:hover{
     transform: scale(1.1);
     transition: 3s;
     box-shadow: 5px 5px 7px 5px #8F2B2F;
     transform: rotate(10deg);
   
 }
-.form-div{
+.form-lp-div{
     background-color: #F5F5F5;
     display: block;
     width: 80%;
 }
-.quote{
-    font: normal normal bolder 30px/30px Lato;
-    color: #A03037;
-}
-.form-div-2{
+
+.form-lp-div-2{
     background-color: #FFFFFF;
     margin: 15%;
     margin-left: 30%;
@@ -51,18 +48,18 @@ img:hover{
     width:50%;
     box-shadow: 5px 5px 30px 5px #A03037;
 }
-.form-div-2:hover{
+.form-lp-div-2:hover{
     transform: scale(1.1);
     transition: 1s;
 }
-.form-title{
+.form-lp-title{
     background-color: white;
     text-align: center;
     font: normal normal bolder 30px/70px Lato;
     border-radius: 30px;
     letter-spacing: 2px;
 }
-.details-div{
+.details-lp-div{
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -72,7 +69,7 @@ img:hover{
     margin-left:10%;
     margin-right: 20%;
 }
-input{
+.input-lp{
     font: normal normal bolder 15px/45px Lato;
     background-color: #E2E2E2;
     color: #2E1D1E;
@@ -82,10 +79,10 @@ input{
     border-radius: 20px;
     padding-left: 20px;
 }
-.password{
+.password-lp{
     margin-bottom: 20px;
 }
-.details-div2{
+.details-lp-div2{
     background-color: #FFFFFF;
     display: flex;
     flex-direction: row;
@@ -98,12 +95,12 @@ input{
     margin-left:10%;
     margin-right: 20%;
 }
-.button-div{
+.button-lp-div{
     display: flex;
     flex-direction: column;
     height: 25%;
 }
-.login-button{
+.login-lp-button{
     background-color: rgb(251, 119, 26);
     color: #FFFFFF;
     outline:none;
@@ -114,16 +111,16 @@ input{
     margin-bottom:5px;
     border-radius: 2px;
 }
-.facebook{
+.facebook-lp{
     background-color:#3b5998;
     
   
 }
-.google{
+.google-lp{
     background-color: #ea4335;
     margin-bottom: 30px;
 }
-.or{
+.or-lp{
     width:70%;
     margin-left: 10%;
     margin-bottom:5px;
