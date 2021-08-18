@@ -3,23 +3,26 @@ import BookCard from "./components/card/card.jsx";
 import Page3 from './components/page3/Page3';
 import OrderPlaced from './components/orderPlaced/OrderPlaced';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
-
+import LoginPage from './components/loginPage/LoginPage';
 
 function App() {
   return (
     <div className="App">
-    <BrowserRouter >
-    <Switch>
-      <Route exact path="/homepage" component={HomePage}>
-      </Route>
-      <Route exact path="/BookCard" component={BookCard}>
-      </Route>
-      <Route exact path='/page3' component={Page3}>
-      </Route>
-      <Route exact path="/orderPlaced" component={OrderPlaced}>
-      </Route>
-    </Switch>
-    </BrowserRouter>
+      <BrowserRouter >
+        <Switch>
+          <Route exact path="/homepage" component={HomePage}>
+            </Route>
+          <Route exact path="/bookcard" component={BookCard}>
+            </Route>
+          <Route exact path='/page3' component={Page3}>
+            </Route>
+          <Route exact path="/orderplaced" component={OrderPlaced}>
+            </Route>
+          <Route exact Path ='/loginpage'>
+              <LoginPage />
+            </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

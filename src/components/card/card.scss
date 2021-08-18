@@ -90,6 +90,14 @@
 .cart-text{
     font: normal normal medium 11px/13px Lato;
 }
+
+.button-cart:focus{
+    background: #3371bf;
+    width: 100%;
+    margin-left: 10%;
+    display: inline-block;
+}
+
 .button-cart {
     font-size: 13px;
     background-color: #a03037;

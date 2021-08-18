@@ -1,5 +1,6 @@
 import React from 'react';
 import 'C:/Users/harshit.jadon.MD-CJDKE06555KH/Desktop/Bookstore App/bookstore-app/src/components/lastPage/LastPage.scss';
+import '../lastPage/LastPage.scss';
 import Successfully from '../../assests/images/Group 4132.svg';
 
 
