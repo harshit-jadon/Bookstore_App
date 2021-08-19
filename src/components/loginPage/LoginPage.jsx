@@ -22,7 +22,7 @@ export default function LoginPage() {
               </div>
               <div className='details-lp-div'>
                 <label>Password</label>
-                <input className='password-lp' type='password' placeholder='Password'/>
+                <input className='input-lp password-lp' type='password' placeholder='Password'/>
               </div>
               <div className='details-lp-div2'>
                 <input type='radio'/><span>Remember me</span>
