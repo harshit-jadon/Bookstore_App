@@ -4,6 +4,7 @@ import Footer from '../footer/footer';
 import LastPage from '../lastPage/LastPage'
 
 class OrderPlaced extends React.Component{
+
     render(){
         return(
             <>

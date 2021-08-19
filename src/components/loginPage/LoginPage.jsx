@@ -1,6 +1,6 @@
 import React from 'react'
 import './LoginPage.scss';
-import bookbg from 'C:/Users/harshit.jadon.MD-CJDKE06555KH/Desktop/Bookstore App/bookstore-app/src/assests/images/bookbg.jpg';
+import bookbg from '../../assests/images/bookbg.jpg';
 
 
 
