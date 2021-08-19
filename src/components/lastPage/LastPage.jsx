@@ -1,9 +1,15 @@
 import React from 'react';
 import './LastPage.scss';
 import Successfully from '../../assests/images/Group 4132.svg';
+import {useHistory} from "react-router-dom";
 
 
 export default function LastPage() {
+    let history=useHistory()
+    function navigate(path) {
+        history.push(`${path}`)
+        //hello
+    }
     return (
         <div className='body-content'>
             <div className='successfully-content'>
@@ -29,7 +35,7 @@ export default function LastPage() {
                 </tr>
             </table>      
             <div className='placeLPButton'>
-                <button className='placed-LPbutton'>Continue Shopping</button>
+                <button className='placed-LPbutton' onClick={()=>navigate('/homepage')}>Continue Shopping</button>
             </div>
     
         </div>
