@@ -33,8 +33,10 @@ export default function Header(props) {
                 </div>
                 <div className='cart-logo'onClick={()=>navigate("/page3")}>
                     <span>Cart</span>
-                    <img src={cartLogo} alt='cartLogo' /><span className="cart-count">{cartSize()}</span>
-
+                    <img src={cartLogo} alt='cartLogo' />
+                    {
+                        cartSize()>0 &&  <span className="cart-count">{cartSize()}</span>
+                    }
                 </div>
            </header>
         </div>
