@@ -9,11 +9,11 @@ function BookCard(props){
         const increment = () => setCount(prevCount => prevCount + 1)
         return [increment, count]
     }
-        const [forceUpdate] = useForceUpdate()
-
-        const onClickHandler = e => {
+    const [forceUpdate] = useForceUpdate()
+    const onClickHandler = e => {
             forceUpdate()
         }
+
     useEffect(()=>gg(),[])
     function gg() {
         let cart = JSON.parse(localStorage.getItem("cart"));
@@ -45,7 +45,6 @@ function BookCard(props){
             cart = [book];
         }
         localStorage.setItem("cart",JSON.stringify(cart));
-        setIsShown(false)
 
         if(shownElement){
             if(!shownElement.find(id=> id===book.id))
@@ -59,20 +58,6 @@ function BookCard(props){
             setShownElement([book.id])
         console.log(shownElement)
     }
-    function check(book){
-        if(shownElement){
-            console.log(shownElement.some(id=>id===book.id))
-            let checker=shownElement.find(id=>id===book.id)
-            if(!(checker===null) && !(checker===undefined)){
-                return false
-            }
-        else
-            return true
-        }
-        else
-            return true
-    }
-    const [isShown, setIsShown] = useState(true);
     const [shownElement,setShownElement] = useState([]);
     const HtmlTooltip = withStyles((theme) => ({
         tooltip: {
