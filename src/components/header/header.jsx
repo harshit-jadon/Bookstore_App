@@ -31,7 +31,7 @@ export default function Header(props) {
                     <img className='search-logo' src={searchLogo} alt ='searchlogo'/>
                     <input type='search' placeholder='Search...' className='search-bar'/>
                 </div>
-                <div class='cart-logo'onClick={()=>navigate("/page3")}>
+                <div className='cart-logo'onClick={()=>navigate("/page3")}>
                     <span>Cart</span>
                     <img src={cartLogo} alt='cartLogo' /><span className="cart-count">{cartSize()}</span>
 

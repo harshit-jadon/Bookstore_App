@@ -6,17 +6,14 @@ function BookCard(props){
 
     const[text,setText] = useState("ADD TO BAG");
     const[wishlistButton, setWishlistButton] = useState(true);
-
-    const handleStateChange = () =>{
-        setText("ADDED TO BAG")
-        setWishlistButton(false)
-    }
     function addToCart(book) {
         // var carts=[]
         // if(JSON.parse(localStorage.getItem('book'))!==null)
         //     carts.push(JSON.parse(localStorage.getItem('book')))
         // carts.push(book)
         // localStorage.setItem("books",JSON.stringify(carts))
+        setText("ADDED TO BAG")
+        setWishlistButton(false)
         let cart = JSON.parse(localStorage.getItem("cart"));
         if(cart){
             let books = cart.find(bookData => bookData.id===book.id);
@@ -56,8 +53,8 @@ function BookCard(props){
                                 <span className="text">by {book.author}</span>
                                 <h4 className="book-price">Rs. {book.price}</h4>
                                 <div className="buttons">
-                                    <button className="button-cart" onClick={()=>addToCart(book)} onClick={handleStateChange}>{text}</button>
-                                    <button className="button-wishlist">WISHLIST</button>
+                                    <button className="button-cart" onClick={()=>addToCart(book)}>{text}</button>
+                                    {wishlistButton && <button className="button-wishlist">WISHLIST</button>}
                                 </div>
                             </div>
 
