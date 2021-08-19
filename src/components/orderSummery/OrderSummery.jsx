@@ -6,6 +6,7 @@ export default function MyCart(props) {
     let history=useHistory()
     function navigate(path) {
         history.push(`${path}`)
+        //hello
     }
     return (
         <div>
