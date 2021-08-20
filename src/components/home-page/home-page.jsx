@@ -6,25 +6,25 @@ import Foot from '../footer/footer';
 import BookStoreService from '../../service/BookStoreService';
 import Pagination from '@material-ui/lab/Pagination';
 
-class HomePage extends React.Component{
+class HomePage extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            bookData : []
+            bookData: []
         };
         this.bookStoreService = new BookStoreService();
     }
-    getBooks=()=>{
+    getBooks = () => {
         this.bookStoreService.getAllBooks()
             .then(responseDTO => {
 
                 let responseData = responseDTO;
                 console.log("Data received after GET Call :\n" + responseData.data);
-                this.setState({bookData: responseData.data},);
+                this.setState({ bookData: responseData.data },);
             }).catch(errror => {
-            console.log("Error while fetching Book List\nError : " + JSON.stringify(errror));
-        })
+                console.log("Error while fetching Book List\nError : " + JSON.stringify(errror));
+            })
     }
 
     componentDidMount() {
@@ -35,28 +35,23 @@ class HomePage extends React.Component{
 
 
     render() {
-        return(
+        return (
             <>
-                <Header/>
+                <Header />
                 <div className="books-sort">
                     <h3 className="heading">Books<span className="book-count">({this.state.bookData.length} Items)</span></h3>
-                        <div className="book-sort">
-                            <div className="sort">
-                                <select className="sort-box">
-                                    <option selected value="dafault">Sort by relevence</option>
-                                    <option value="Price:Low to High">Price:Low to High</option>
-                                    <option value="Price:High to Low">Price:High to Low</option>
-                                    <option value="Newest Arrival">Newest Arrival</option>
-                                </select>
-                        </div>
-                    </div>
+                    <select className="sort-box">
+                        <option selected value="dafault">Sort by relevence</option>
+                        <option value="Price:Low to High">Price:Low to High</option>
+                        <option value="Price:High to Low">Price:High to Low</option>
+                        <option value="Newest Arrival">Newest Arrival</option>
+                    </select>
                 </div>
-                    <div className="cards-layout">
-                            <Card bookDetails={this.state.bookData} />
-                    </div>
-                    <div className="book-details"></div>
+                <div className="cards-layout">
+                    <Card bookDetails={this.state.bookData} />
+                </div>
                 <Pagination count={10} />
-                <Foot/>
+                <Foot />
             </>
         )
     }
