@@ -1,16 +1,20 @@
-body{
-    height: 100%;
-    box-sizing: border-box;
+.newuser-div{
+    height: 100vh;
     background-image: url('../../assests/images/newbookbg.jpg');
 }
 .newuser-div-2{
     background-color: #FFFFFF;
     margin-left: 35%;
-    margin-right: 35%;
-    margin-top:4%;
-    margin-bottom: 3%;
     width:30%;
-    border-radius:20px;
+    border-radius:5%;
+}
+.user-form-title{
+    background-color: white;
+    color: #A03037;
+    text-align: center;
+    font: normal normal bolder 30px/70px Lato;
+    border-radius: 30px;
+    letter-spacing: 2px;
 }
 .user-details-div{
     background-color: #FFFFFF;

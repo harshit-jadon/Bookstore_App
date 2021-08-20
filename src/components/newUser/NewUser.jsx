@@ -3,9 +3,9 @@ import './NewUser.scss';
 
 export default function NewUser() {
     return (
-        <div>
+        <div className="newuser-div">
             <form className='newuser-div-2'>
-             <div className='form-lp-title'>
+             <div className='user-form-title'>
                 <span className='title'>Welcome to BookCart New User</span>
              </div>
              <div className='user-details-div'>
@@ -13,8 +13,8 @@ export default function NewUser() {
                 <input className='input-lp' type="text" placeholder='full name'/> 
               </div>
              <div className='user-details-div'>
-                <label>Username</label>
-                <input className='input-lp' type="text" placeholder='Email Adrress / PhoneNumber'/> 
+                <label>E-mail</label>
+                <input className='input-lp' type="text" placeholder='Email Adrress'/> 
               </div>
               <div className='user-details-div'>
                 <label>Password</label>
