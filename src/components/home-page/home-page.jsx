@@ -1,6 +1,6 @@
 import React from 'react';
 import '../home-page/home-page.scss';
-import Card from '../card/card.jsx';
+import Card from '../card/Cards.jsx';
 import Header from '../header/header';
 import Foot from '../footer/footer';
 import BookStoreService from '../../service/BookStoreService';
@@ -23,7 +23,7 @@ class HomePage extends React.Component{
                 console.log("Data received after GET Call :\n" + responseData.data);
                 this.setState({bookData: responseData.data},);
             }).catch(errror => {
-            console.log("Error while fetching Employee List\nError : " + JSON.stringify(errror));
+            console.log("Error while fetching Book List\nError : " + JSON.stringify(errror));
         })
     }
 

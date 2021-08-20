@@ -82,11 +82,22 @@
     font: normal normal medium 11px/13px Lato;
 }
 
-.button-cart:focus{
-    background: #3371bf;
+.button-cart1{
+    font-size: 13px;
+    background-color: #3371bf;
     width: 100%;
     margin-left: 10%;
     display: inline-block;
+    border-radius: 2px;
+    padding: 11px 8px;
+    margin-right: 5%;
+    cursor: pointer;
+    font-size: 12px bold;
+    outline: none;
+    border: none;
+    white-space: nowrap;
+    color: white;
+
 }
 
 .button-cart {
