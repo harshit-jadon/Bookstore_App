@@ -4,6 +4,8 @@ import BookCard from "./components/card/Cards.jsx";
 import Page3 from './components/page3/Page3';
 import OrderPlaced from './components/orderPlaced/OrderPlaced';
 import LoginPage from './components/loginPage/LoginPage';
+import NewUser from './components/newUser/NewUser';
+
 
 function App() {
   return (
@@ -18,8 +20,10 @@ function App() {
             </Route>
           <Route exact path="/orderplaced" component={OrderPlaced}>
             </Route>
-          <Route exact Path ='/loginpage'>
-              <LoginPage />
+          <Route exact path ='/loginpage' component ={LoginPage}>
+            </Route>
+            <Route exact path='/newuser'>
+              <NewUser />
             </Route>
         </Switch>
       </BrowserRouter>

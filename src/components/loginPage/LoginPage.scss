@@ -6,23 +6,28 @@
     display: flex;
     flex-direction: row;
     height: 100vh;
-    background-color: #00000029;
-
+    background-image: url('../../assests/images/fombookbg.jpg');
 }
 .img-bor-div{
-    background-color: #9D9D9D;
+    background-image: url('../../assests/images/fombookbg.jpg');
     width:40%;
-    margin:2%;
+    margin:3%;
     border-bottom-left-radius: 100px;
     border-top-left-radius: 100px;
     box-shadow: 5px 5px 10px 5px #9D9D9D;
-
+}
+.img-bor-div:hover{
+    transform: scale(1.1);
+    transition: 2s;
+    box-shadow: 5px 5px 7px 5px #9D9D9D;
+    transform: rotate(-10deg);
 }
   
 .img-lp{
+    height: 95%;
     margin-left:20%;
-    margin-top: 4%;
     margin-right: 4%;
+    // margin-top: 3%;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     transform: translate(4%, 2%);
@@ -35,94 +40,8 @@
   
 }
 .form-lp-div{
-    background-color: #F5F5F5;
+    background-image: url('../../assests/images/fombookbg.jpg');
     display: block;
     width: 80%;
-}
-
-.form-lp-div-2{
-    background-color: #FFFFFF;
-    margin: 15%;
-    margin-left: 30%;
-    border-radius: 30px;
-    width:50%;
-    box-shadow: 5px 5px 30px 5px #A03037;
-}
-.form-lp-div-2:hover{
-    transform: scale(1.1);
-    transition: 1s;
-}
-.form-lp-title{
-    background-color: white;
-    text-align: center;
-    font: normal normal bolder 30px/70px Lato;
-    border-radius: 30px;
-    letter-spacing: 2px;
-}
-.details-lp-div{
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font: normal normal bolder 25px/70px Lato;
-    letter-spacing: 2px;
-    margin-left:10%;
-    margin-right: 20%;
-}
-.input-lp{
-    font: normal normal bolder 15px/45px Lato;
-    background-color: #E2E2E2;
-    color: #2E1D1E;
-    border:none;
-    outline: none;
-    padding:5px;
-    border-radius: 20px;
-    padding-left: 20px;
-}
-.password-lp{
-    margin-bottom: 20px;
-}
-.details-lp-div2{
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    font: normal normal bolder 15px/40px Lato;
-    // border-radius: 30px;
-    letter-spacing: 2px;
-    margin-top: -10px;
-    margin-left:10%;
-    margin-right: 20%;
-}
-.button-lp-div{
-    display: flex;
-    flex-direction: column;
-    height: 25%;
-}
-.login-lp-button{
-    background-color: rgb(251, 119, 26);
-    color: #FFFFFF;
-    outline:none;
-    border: none;
-    font: normal normal normal 20px/40px Lato;
-    width: 70%;
-    margin-left: 10%;
-    margin-bottom:5px;
-    border-radius: 2px;
-}
-.facebook-lp{
-    background-color:#3b5998;
-    
-  
-}
-.google-lp{
-    background-color: #ea4335;
-    margin-bottom: 30px;
-}
-.or-lp{
-    width:70%;
-    margin-left: 10%;
-    margin-bottom:5px;
-    text-align: center;
+    background-repeat: no-repeat;
 }
