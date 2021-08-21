@@ -1,7 +1,13 @@
 import React from 'react';
 import './NewUser.scss';
+import {useHistory} from "react-router-dom";
 
 export default function NewUser() {
+    let history=useHistory()
+    function navigate(path) {
+        history.push(`${path}`)
+        //hello
+    }
     return (
         <div className="newuser-div">
             <form className='newuser-div-2'>
@@ -27,7 +33,7 @@ export default function NewUser() {
               <div className='user-button-div'>
                 <button className='login-lp-button'>Sign Up</button>
                 <span className='or-lp'> or </span>
-                <button className='login-lp-button facebook-lp'>Existing User! Login in</button>
+                <button className='login-lp-button facebook-lp' onClick={()=>navigate('/loginpage')}>Existing User! Login in</button>
               </div>
            </form>
         </div>

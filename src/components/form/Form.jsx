@@ -1,8 +1,14 @@
 import React from 'react';
 import './Form.scss';
 import '../newUser/NewUser';
+import {useHistory} from "react-router-dom";
 
 export default function Form() {
+    let history=useHistory()
+    function navigate(path) {
+        history.push(`${path}`)
+        //hello
+    }
     return (
            <form className='form-lp-div-2'>
              <div className='form-lp-title'>
@@ -23,7 +29,7 @@ export default function Form() {
               <div className='button-lp-div'>
                 <button className='login-lp-button'>Login</button>
                 <span className='or-lp'> or </span>
-                <button className='login-lp-button facebook-lp'>New to Bookstore? Create an account</button>
+                <button className='login-lp-button facebook-lp' onClick={()=>navigate('/newuser')}>Create a new account</button>
               </div>
            </form>
     )
