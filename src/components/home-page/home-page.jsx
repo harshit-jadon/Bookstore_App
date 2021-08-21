@@ -48,7 +48,7 @@ class HomePage extends React.Component {
                     </select>
                 </div>
                 <div className="cards-layout">
-                    <Card bookDetails={this.state.bookData} />
+                    <Card bookDetails={this.state.bookData}  />
                 </div>
                 <Pagination count={10} />
                 <Foot />
