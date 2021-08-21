@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './NewUser.scss';
 import {useHistory} from "react-router-dom";
 
@@ -6,7 +6,20 @@ export default function NewUser() {
     let history=useHistory()
     function navigate(path) {
         history.push(`${path}`)
-        //hello
+
+    }
+    const [name,setName]=useState('')
+    const [email,setEmail]=useState('')
+    const [password,setPassword] = useState('')
+    const [mobileNumber,setMobileNumber]=useState('')
+    function submit(e){
+        e.preventDefault()
+        let submitObject={
+            username:email,
+            password:password,
+            mobile:mobileNumber,
+            name:name
+        }
     }
     return (
         <div className="newuser-div">
@@ -16,7 +29,7 @@ export default function NewUser() {
              </div>
              <div className='user-details-div'>
                 <label> FullName</label>
-                <input className='input-lp' type="text" placeholder='full name'/> 
+                <input className='input-lp' type="text" placeholder='full name'/>
               </div>
              <div className='user-details-div'>
                 <label>E-mail</label>
@@ -31,7 +44,7 @@ export default function NewUser() {
                 <input className='input-lp' type="tele" placeholder='phone Number'/> 
               </div>
               <div className='user-button-div'>
-                <button className='login-lp-button'>Sign Up</button>
+                <button className='login-lp-button' onClick={(e)=>submit(e)}>Sign Up</button>
                 <span className='or-lp'> or </span>
                 <button className='login-lp-button facebook-lp' onClick={()=>navigate('/loginpage')}>Existing User! Login in</button>
               </div>

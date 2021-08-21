@@ -7,7 +7,7 @@ export default function Form() {
     let history=useHistory()
     function navigate(path) {
         history.push(`${path}`)
-        //hello
+
     }
     return (
            <form className='form-lp-div-2'>
