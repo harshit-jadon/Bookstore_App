@@ -3,6 +3,7 @@ import '../header/header.scss';
 import bookStoreLogo from '../../assests/images/education.svg';
 import cartLogo from '../../assests/images/supermarket.svg';
 import searchLogo from '../../assests/images/ic_zoom_out_24px.svg';
+import Avatar from '@material-ui/core/Avatar';
 import {Link} from "@material-ui/core";
 import {useHistory} from "react-router-dom"
 
@@ -38,6 +39,7 @@ export default function Header(props) {
                         cartSize()>0 &&  <span className="cart-count">{cartSize()}</span>
                     }
                 </div>
+                <div className="username"><Avatar src="/broken-image.jpg" /><span>User</span></div>
            </header>
         </div>
     )
