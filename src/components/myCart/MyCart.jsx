@@ -1,8 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './MyCart.scss';
 import BookDetails from './BookDetails';
 
 export default function MyCart(props) {
+    const useForceUpdate = () => {
+        const [count, setCount] = useState(0)
+
+        const increment = () => setCount(prevCount => prevCount + 1)
+        return [increment, count]
+    }
+    const [forceUpdate] = useForceUpdate()
+    const onClickHandler = e => {
+        forceUpdate()
+    }
+
     return (
         <div className='main-div'>
             <div className='other-div'>
@@ -17,7 +28,7 @@ export default function MyCart(props) {
                                 <img src={book.image} alt='bookpic' className='card-img'/>
                             </div>
                             <div className='details-div'>
-                                <BookDetails book={book}/>
+                                <BookDetails book={book} refresh={(e)=>onClickHandler(e)}/>
                             </div>
                         </div>
                         </>
