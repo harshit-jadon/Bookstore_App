@@ -1,8 +1,52 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import './CustomerDetails.scss';
 import TextField from '@material-ui/core/TextField';
+import BookStoreService from "../../service/BookStoreService";
 
-export default function customerDetails(props) {
+export default function CustomerDetails(props) {
+    const [name,setName]=useState('');
+    const [mobile,setMobile]=useState('');
+    const [pincode,setPinCode]=useState('');
+    const [locality,setLocality]=useState('');
+    const [address,setAddress]=useState('');
+    const [city,setCity]=useState('');
+    const [landmark,setLandmark]=useState('');
+
+
+    const handleName=(e)=>{
+        setName(e.target.value)
+    }
+    const handleMobile=(e)=>{
+        setMobile(e.target.value)
+    }
+    const handlePinCode=(e)=>{
+        setPinCode(e.target.value)
+    }
+    const handleLocality=(e)=>{
+        setLocality(e.target.value)
+    }
+    const handleAddress=(e)=>{
+        setAddress(e.target.value)
+    }
+    const handleCity=(e)=>{
+        setCity(e.target.value)
+    }
+    const handleLandmark=(e)=>{
+        setLandmark(e.target.value)
+    }
+    const submitAddress = () => {
+      let object={
+          "city":city,
+          "landmark":landmark,
+          "pincode":pincode,
+          "locality":locality,
+          "address":address
+      }
+      new BookStoreService().patchAddress(object).then(responseText => {
+            console.log("Address Added successfully" + JSON.stringify(responseText.data))})
+            .catch(err=>{console.log(err);}
+            )
+    }
 
     return (
         <div className='other-details-cd'>
@@ -17,6 +61,7 @@ export default function customerDetails(props) {
                         <TextField  style={{ margin: 8 , width: 250}} label="Phone number" id="outlined-size-normal" variant="outlined" value={props.user.mobile} required/>
                     </div>
                     <div>
+<<<<<<< HEAD
                         <TextField  style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined" required/>
                         <TextField  style={{ margin: 8, width: 250 }} label="Locality" id="outlined-size-normal" variant="outlined" required/>
                     </div>
@@ -26,6 +71,22 @@ export default function customerDetails(props) {
                     <div>
                         <TextField  style={{ margin: 8 , width: 250}} label="city/town" id="outlined-size-normal" variant="outlined" required/>
                         <TextField  style={{ margin: 8 , width: 250}} label="Landmark" id="outlined-size-normal" variant="outlined" required/>
+=======
+                        <TextField  style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined"
+                                    value={pincode} onChange={(e)=>handlePinCode(e)}/>
+                        <TextField  style={{ margin: 8, width: 250 }} label="Locality" id="outlined-size-normal" variant="outlined"
+                                    value={locality} onChange={(e)=>handleLocality(e)}/>
+                    </div>
+                    <div>
+                        <TextField style={{ margin: 8 , width: 517}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined"
+                                   value={address} onChange={(e)=>handleAddress(e)}/>
+                    </div>
+                    <div>
+                        <TextField  style={{ margin: 8 , width: 250}} label="city/town" id="outlined-size-normal" variant="outlined"
+                                    value={city} onChange={(e)=>handleCity(e)}/>
+                        <TextField  style={{ margin: 8 , width: 250}} label="Landmark" id="outlined-size-normal" variant="outlined"
+                                    value={landmark} onChange={(e)=>handleLandmark(e)}/>
+>>>>>>> 32973773a0a985c5622efc6eff2fb2888ede4d0c
                     </div>
                 </div>
                 <div className='radioDiv'>
@@ -49,7 +110,10 @@ export default function customerDetails(props) {
                 </div>
 
                 <div className='placeButton-cd'>
-                <button className='placed-button-cd' onClick={()=>props.openSummary(true)}>continue</button>
+                <button className='placed-button-cd' onClick={()=> {
+                    props.openSummary(true)
+                    submitAddress();
+                }}>continue</button>
                 </div>
             </>
             }

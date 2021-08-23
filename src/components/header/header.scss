@@ -6,7 +6,8 @@
     align-items: center;
     height: 60px;
     width: 100%;
-    z-index:9999
+    z-index:9999;
+    flex: 1;
 }
 .sidebar {
     position: -webkit-sticky; 
@@ -20,7 +21,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-left: 9%;
+    margin-left: 9.5%;
 }
 span {
     margin-left: 10px;
@@ -59,7 +60,6 @@ span {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    margin-right: 7.8%;
 }
 
 .cart-count {
@@ -78,6 +78,20 @@ span {
 
 }
 
+.username{
+    font: normal normal normal 20px/26px Roboto;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    // margin-left: -130px;
+    margin-right: -5%;
+}
+.username > span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 @media screen and (max-width: 200px) {
     .header-content{
         width: 50%;

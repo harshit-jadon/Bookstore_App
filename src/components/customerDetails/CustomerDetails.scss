@@ -77,3 +77,7 @@
     flex-direction: column;
     vertical-align: top;
 }
+
+.input-div > .MuiFormControl-root > .MuiInputLabel-outlined{
+    z-index: -999;
+}
