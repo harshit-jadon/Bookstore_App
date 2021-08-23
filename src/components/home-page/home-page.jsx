@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../home-page/home-page.scss';
 import Card from '../card/Cards.jsx';
 import Header from '../header/header';
@@ -11,7 +11,9 @@ class HomePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            bookData: []
+            bookData: [],
+            refresh1:false,
+            userData:''
         };
         this.bookStoreService = new BookStoreService();
     }
@@ -29,15 +31,35 @@ class HomePage extends React.Component {
 
     componentDidMount() {
         this.getBooks()
+        this.getUser()
         console.log(this.state.bookData)
     }
 
+    refresh(){
+        this.setState({refresh1:true})
+        console.log("hii")
+    }
+    stopPage(){
+        this.setState({refresh1:false})
+    }
+    getUser = () => {
+        this.bookStoreService.getUser()
+            .then(responseDTO => {
 
+                let responseData = responseDTO;
+                console.log("Data received after GET Call :\n" + responseData.data.name);
+                this.setState({ userData: responseData.data });
+            }).then(()=>{
+            return this.state.userData
+        }).catch(errror => {
+            console.log("Error while fetching user\nError : " + JSON.stringify(errror));
+        })
+    }
 
     render() {
         return (
             <>
-                <Header />
+                <Header refresh={this.state.refresh1} stopRefresh={()=>this.stopPage()} username={this.state.userData.name}/>
                 <div className="books-sort">
                     <h3 className="heading">Books<span className="book-count">({this.state.bookData.length} Items)</span></h3>
                     {/* <select className="sort-box">
@@ -48,7 +70,7 @@ class HomePage extends React.Component {
                     </select> */}
                 </div>
                 <div className="cards-layout">
-                    <Card bookDetails={this.state.bookData}  />
+                    <Card bookDetails={this.state.bookData} refresh={()=>this.refresh()} />
                 </div>
                 {/* <Pagination count={10} /> */}
                 <Foot />

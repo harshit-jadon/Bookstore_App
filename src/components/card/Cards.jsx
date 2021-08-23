@@ -12,6 +12,7 @@ function BookCard(props){
     const [forceUpdate] = useForceUpdate()
     const onClickHandler = e => {
             forceUpdate()
+        props.refresh()
         }
 
     useEffect(()=>gg(),[])

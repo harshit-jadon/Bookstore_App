@@ -12,6 +12,7 @@ export default function MyCart(props) {
     const [forceUpdate] = useForceUpdate()
     const onClickHandler = e => {
         forceUpdate()
+        props.refresh_1()
     }
 
     return (

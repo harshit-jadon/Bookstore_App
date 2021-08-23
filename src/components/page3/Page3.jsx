@@ -12,9 +12,17 @@ class Page3 extends React.Component{
         this.state={
             openAddress:false,
             openSummary:false,
-            userData:''
+            userData:'',
+            refresh1:false
         }
         this.bookStoreService = new BookStoreService();
+    }
+    refresh(){
+        this.setState({refresh1:true})
+        console.log("hii")
+    }
+    stopPage(){
+        this.setState({refresh1:false})
     }
     componentDidMount() {
         this.getUser()
@@ -36,8 +44,8 @@ class Page3 extends React.Component{
     render(){
         return(
             <>
-            <Header />
-            <MyCart openAddress={(value)=>this.setOpenAddress(value)}/>
+                <Header refresh={this.state.refresh1} stopRefresh={()=>this.stopPage()} username={this.state.userData.name}/>
+                <MyCart openAddress={(value)=>this.setOpenAddress(value)} refresh_1={()=>this.refresh()}/>
             <OrderDetails isOpen={this.state.openAddress} openSummary={(value)=>this.setOpenSummery(value)}
                 user={this.state.userData}/>
 
