@@ -14,9 +14,19 @@ export default function Form() {
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
 
+    const [emailError,setemailError]=useState('');
+    const [isError,setisError]=useState(false);
+
     function emailChange(e) {
         setEmail(e.target.value)
-    }
+          const nameRegex = RegExp('^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$');
+          if(nameRegex.test(e.target.value)){
+            setemailError('')
+            setisError(false)
+          }else{
+            setemailError('Something is Wrong..if you are NEW USER Click on "Create a New Account"')
+            setisError(true) } 
+        }
 
     function passwordChange(e) {
         setPassword(e.target.value)    }
@@ -46,6 +56,7 @@ export default function Form() {
                 <label>Username</label>
                 <input className='input-lp' type="text" placeholder='Email Adrress / PhoneNumber'
                 value={email} onChange={(e)=>emailChange(e)}/>
+                <error-output className="text-error" htmlFor="email">{emailError}</error-output>
               </div>
               <div className='details-lp-div'>
                 <label>Password</label>

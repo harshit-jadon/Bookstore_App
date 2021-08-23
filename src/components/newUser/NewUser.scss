@@ -1,11 +1,11 @@
 .newuser-div{
-    height: 100vh;
+    height: 100%;
     background-image: url('../../assests/images/newbookbg.jpg');
 }
 .newuser-div-2{
     background-color: #FFFFFF;
-    margin-left: 35%;
-    width:30%;
+    margin-left: 30%;
+    width:40%;
     border-radius:5%;
 }
 .user-form-title{
@@ -32,5 +32,18 @@
     flex-direction: column;
     height: 25%;
     margin-top:6%;
-    margin-left:8.5%;  
+    margin-left:2%;  
+}
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+    font: normal normal bolder 12px/20px Lato;
+}
+.small-div{
+    font: normal normal bold 10px/20px Lato;
+    letter-spacing: 1px;
+    margin-left: 15px;
+    color: black;
 }

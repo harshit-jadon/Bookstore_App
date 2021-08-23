@@ -2,10 +2,10 @@
 .form-lp-div-2{
     background-color: #FFFFFF;
     margin: 15%;
-    margin-left: 30%;
+    margin-left: 25%;
     border-radius: 30px;
     width:50%;
-    box-shadow: 5px 5px 50px 5px #A03037;
+    box-shadow: 15px 5px 10px 5px #E2E2E2;
 }
 .form-lp-div-2:hover{
     transform: scale(1.1);
@@ -27,8 +27,8 @@
     justify-content: center;
     font: normal normal bolder 25px/70px Lato;
     letter-spacing: 2px;
-    margin-left:10%;
-    margin-right: 20%;
+    margin-left:15%;
+    margin-right:15%;
 }
 .input-lp{
     font: normal normal bolder 15px/45px Lato;
@@ -51,11 +51,10 @@
     justify-content: flex-start;
     align-items: center;
     font: normal normal bolder 15px/40px Lato;
-    // border-radius: 30px;
     letter-spacing: 2px;
     margin-top: -10px;
-    margin-left:10%;
-    margin-right: 20%;
+    margin-left:15%;
+    margin-right: 15%;
 }
 .button-lp-div{
     display: flex;
@@ -69,8 +68,9 @@
     border: none;
     font: normal normal normal 20px/40px Lato;
     width: 70%;
-    margin-left: 10%;
-    margin-bottom:5px;
+    margin-top: 5px;
+    margin-left: 15%;
+    margin-bottom:7px;
     border-radius: 2px;
     
 }
@@ -81,7 +81,14 @@
 }
 .or-lp{
     width:70%;
-    margin-left: 10%;
+    margin-left: 15%;
     margin-bottom:5px;
     text-align: center;
+}
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+    font: normal normal bolder 12px/20px Lato;
 }
