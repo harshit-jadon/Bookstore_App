@@ -12,19 +12,19 @@ export default function customerDetails(props) {
             <>
                 <div className='input-div'>
                 <div>
-                        <TextField  style={{ margin: 8, width: 250 }} label="Name" id="outlined-size-normal" variant="outlined"/>
-                        <TextField  style={{ margin: 8 , width: 250}} label="Phone number" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8, width: 250, zIndex: -999}} label="Name" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8 , width: 250, zIndex: -999}} label="Phone number" id="outlined-size-normal" variant="outlined"/>
                     </div>
                     <div>
-                        <TextField  style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined"/>
-                        <TextField  style={{ margin: 8, width: 250 }} label="Locality" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8 , width: 250, zIndex: -999}} label="Pincode" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8, width: 250, zIndex: -999}} label="Locality" id="outlined-size-normal" variant="outlined"/>
                     </div>
                     <div>
-                        <TextField style={{ margin: 8 , width: 517}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined"/>
+                        <TextField style={{ margin: 8 , width: 517, zIndex: -999}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined"/>
                     </div>
                     <div>
-                        <TextField  style={{ margin: 8 , width: 250}} label="city/town" id="outlined-size-normal" variant="outlined"/>
-                        <TextField  style={{ margin: 8 , width: 250}} label="Landmark" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8 , width: 250, zIndex: -999}} label="city/town" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8 , width: 250, zIndex: -999}} label="Landmark" id="outlined-size-normal" variant="outlined"/>
                     </div>
                 </div>
                 <div className='radioDiv'>
