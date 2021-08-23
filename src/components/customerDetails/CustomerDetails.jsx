@@ -1,8 +1,9 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './CustomerDetails.scss';
 import TextField from '@material-ui/core/TextField';
 
 export default function customerDetails(props) {
+
     return (
         <div className='other-details-cd'>
             <div className='details-ordercart-cd'>
@@ -12,8 +13,8 @@ export default function customerDetails(props) {
             <>
                 <div className='input-div'>
                 <div>
-                        <TextField  style={{ margin: 8, width: 250 }} label="Name" id="outlined-size-normal" variant="outlined"/>
-                        <TextField  style={{ margin: 8 , width: 250}} label="Phone number" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8, width: 250 }} label="Name" id="outlined-size-normal" variant="outlined" value={props.user.name}/>
+                        <TextField  style={{ margin: 8 , width: 250}} label="Phone number" id="outlined-size-normal" variant="outlined" value={props.user.mobile}/>
                     </div>
                     <div>
                         <TextField  style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined"/>
