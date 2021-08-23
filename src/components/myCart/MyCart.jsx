@@ -19,7 +19,7 @@ export default function MyCart(props) {
         <div className='main-div'>
             <div className='other-div'>
                 <div className='my-cart'>
-                    <span>My Cart(2)</span>
+                    <span>My Cart</span>
                 </div>
                 {
                     JSON.parse(localStorage.getItem("cart")).map((book)=>(
