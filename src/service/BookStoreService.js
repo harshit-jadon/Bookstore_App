@@ -17,4 +17,7 @@ export default class BookStoreService{
     login(userData){
         return AxiosService.post(`${this.baseUrl}/authenticate`,userData)
     }
+    patchAddress(address){
+        return AxiosService.patch(`${this.baseUrl}/component`,address)
+    }
 }

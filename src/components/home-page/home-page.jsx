@@ -21,7 +21,7 @@ class HomePage extends React.Component {
 
                 let responseData = responseDTO;
                 console.log("Data received after GET Call :\n" + responseData.data);
-                this.setState({ bookData: responseData.data },);
+                this.setState({ bookData: responseData.data },()=>console.log(this.state.bookData));
             }).catch(errror => {
                 console.log("Error while fetching Book List\nError : " + JSON.stringify(errror));
             })

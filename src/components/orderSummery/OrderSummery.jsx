@@ -31,7 +31,6 @@ export default function MyCart(props) {
                         ))
                     }
 
-
                 <div className='placeSummeryButton'>
                     <button className='placed-summerybutton' onClick={()=>navigate('/orderplaced')}>checkout</button>
                 </div>

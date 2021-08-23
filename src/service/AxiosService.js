@@ -9,5 +9,9 @@ class AxiosService {
   post(url='', payload = null){
     return axios.post(url, payload,{headers:{'content-type':'application/json'}})
   }
+  patch(url='',payload=null){
+    return axios.patch(url,payload,{headers:{'authorization':`Bearer ${localStorage.getItem('token')}`,
+      }})
+  }
 }
 module.exports = new AxiosService();
