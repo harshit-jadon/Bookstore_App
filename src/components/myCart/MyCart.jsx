@@ -17,8 +17,8 @@ export default function MyCart(props) {
 
     return (
         <div className='main-div'>
-            <div className='other-div'>
-                <div className='my-cart'>
+            <div className='border-unique-div'>
+                <div className='title-unique-div'>
                     <span>My Cart</span>
                 </div>
                 {

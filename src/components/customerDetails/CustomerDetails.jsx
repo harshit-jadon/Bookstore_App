@@ -58,8 +58,8 @@ export default function CustomerDetails(props) {
     }
 
     return (
-        <div className='other-details-cd'>
-            <div className='details-ordercart-cd'>
+        <div className='border-unique-div'>
+            <div className='title-unique-div'>
                 <span>Customer Details</span>
             </div>
             {props.isOpen &&

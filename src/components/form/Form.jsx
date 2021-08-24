@@ -15,6 +15,7 @@ export default function Form() {
     const [password,setPassword]=useState('');
 
     const [emailError,setemailError]=useState('');
+    const [passwordError,setpasswordError]=useState('');
     const [isError,setisError]=useState(false);
 
     function emailChange(e) {
@@ -29,7 +30,15 @@ export default function Form() {
         }
 
     function passwordChange(e) {
-        setPassword(e.target.value)    }
+        setPassword(e.target.value)
+        const nameRegex = RegExp('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})');
+        if(nameRegex.test(e.target.value)){
+          setpasswordError('')
+          setisError(false)
+        }else{
+          setpasswordError('Incorrect Password')
+          setisError(true) }  
+    }
 
     function login(e) {
         e.preventDefault()
@@ -51,7 +60,7 @@ export default function Form() {
     return (
            <form className='form-lp-div-2'>
              <div className='form-lp-title'>
-                <span className='title'>Login to Bookcart</span>
+                <span className='title'>Login</span>
              </div>
              <div className='details-lp-div'>
                 <label>Username</label>
@@ -63,6 +72,7 @@ export default function Form() {
                 <label>Password</label>
                 <input className='input-lp password-lp' type='password' placeholder='Password'
                 value={password} onChange={(e)=>passwordChange(e)}/>
+                <error-output2 className="text-error" htmlFor="email">{passwordError}</error-output2>
               </div>
               {/* <div className='details-lp-div2'>
                 <input type='radio'/><span>Remember me</span>
@@ -71,7 +81,7 @@ export default function Form() {
               <div className='button-lp-div'>
                 <button className='login-lp-button' onClick={(e)=>login(e)}>Login</button>
                 <span className='or-lp'> or </span>
-                <button className='login-lp-button facebook-lp' onClick={()=>navigate('/newuser')}>Create a new account</button>
+                <button className='login-lp-button facebook-lp' onClick={()=>navigate('/signup')}>Create a new account</button>
               </div>
            </form>
     )

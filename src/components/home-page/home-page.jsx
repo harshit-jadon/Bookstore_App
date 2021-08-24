@@ -4,7 +4,6 @@ import Card from '../card/Cards.jsx';
 import Header from '../header/header';
 import Foot from '../footer/footer';
 import BookStoreService from '../../service/BookStoreService';
-import Pagination from '@material-ui/lab/Pagination';
 
 class HomePage extends React.Component {
 

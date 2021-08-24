@@ -1,15 +1,16 @@
 .body-lp-div{
-    height:100vh;
-    min-height: 700px;;
+    height:100%;
+    min-height: 300px;
 }
 .main-lp-div{
     display: flex;
     flex-direction: row;
     height: 100vh;
     background-image: url('../../assests/images/fombookbg.jpg');
+    background-position: center;
+    background-size: cover; 
 }
 .img-bor-div{
-    background-image: url('../../assests/images/fombookbg.jpg');
     width:40%;
     margin:3%;
     border-bottom-left-radius: 100px;
@@ -22,12 +23,10 @@
     box-shadow: 5px 5px 7px 5px #9D9D9D;
     transform: rotate(-10deg);
 }
-  
 .img-lp{
     height: 95%;
     margin-left:20%;
     margin-right: 4%;
-    // margin-top: 3%;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     transform: translate(4%, 2%);
@@ -37,10 +36,9 @@
     transition: 3s;
     box-shadow: 5px 5px 7px 5px #8F2B2F;
     transform: rotate(10deg);
-  
 }
 .form-lp-div{
-    background-image: url('../../assests/images/fombookbg.jpg');
+
     display: block;
     width: 80%;
     background-repeat: no-repeat;

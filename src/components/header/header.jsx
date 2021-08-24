@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import '../header/header.scss';
 import bookStoreLogo from '../../assests/images/education.svg';
 import cartLogo from '../../assests/images/supermarket.svg';
 import searchLogo from '../../assests/images/ic_zoom_out_24px.svg';
 import Avatar from '@material-ui/core/Avatar';
-import {useHistory} from "react-router-dom"
+import Tooltip from '@material-ui/core/Tooltip';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import { useHistory } from "react-router-dom"
 import BookStoreService from "../../service/BookStoreService";
 
 export default function Header(props) {
@@ -19,26 +21,26 @@ export default function Header(props) {
     const onClickHandler = e => {
         forceUpdate()
     }
-    useEffect(()=>{
-        if(props.refresh){
+    useEffect(() => {
+        if (props.refresh) {
             onClickHandler()
             props.stopRefresh()
         }
 
     })
 
-    const cartSize=()=>{
-        const cart=JSON.parse(localStorage.getItem("cart"))
-        if(cart) {
+    const cartSize = () => {
+        const cart = JSON.parse(localStorage.getItem("cart"))
+        if (cart) {
             return cart.length
         }
     }
 
-    let history=useHistory()
+    let history = useHistory()
     function navigate(path) {
         history.push(`${path}`)
     }
-    const [name,setName]=useState('')
+    const [name, setName] = useState('')
 
     // function username() {
     //     new BookStoreService().getUser().then(responseDTO => {
@@ -51,33 +53,45 @@ export default function Header(props) {
     //     })
     // }
 
+    const theme = createTheme({
+        overrides: {
+            MuiAvatar: {
+                colorDefault: {
+                    color: '#a03037',
+                    backgroundColor:'#fcfcfc'
+                },
+            },
+        },
+    });
+
     return (
         <div className='sidebar'>
-           <header class='header-content'>
-                <div class = 'logo-bookstore' onClick={()=>navigate("/homepage")} style={{cursor:'pointer'}}>
-                    <img src={bookStoreLogo} alt ='bookStorelogo'/>
+            <header class='header-content'>
+                <div class='logo-bookstore' onClick={() => navigate("/homepage")} style={{ cursor: 'pointer' }}>
+                    <img src={bookStoreLogo} alt='bookStorelogo' />
                     <span>Bookstore</span>
                 </div>
                 <div className='anchor'>
-                    <img className='search-logo' src={searchLogo} alt ='searchlogo'/>
-                    <input type='search' placeholder='Search...' className='search-bar'/>
+                    <img className='search-logo' src={searchLogo} alt='searchlogo' />
+                    <input type='search' placeholder='Search...' className='search-bar' />
                 </div>
-                <div className='cart-logo'onClick={()=>navigate("/page3")}>
+                <div className='cart-logo' onClick={() => navigate("/page3")}>
                     <span>Cart</span>
                     <img src={cartLogo} alt='cartLogo' />
                     {
-                        cartSize()>0 &&  <span className="cart-count">{cartSize()}</span>
+                        cartSize() > 0 && <span className="cart-count">{cartSize()}</span>
                     }
                 </div>
-                <div className="username" onClick={
-                    (e)=>{
-                        e.preventDefault()
-                        localStorage.removeItem('token')
-                        localStorage.removeItem('cart')
-                        navigate('/loginpage')
-                    }
-                }><Avatar src="/broken-image.jpg" /><span>{props.username}</span></div>
-           </header>
+                <Tooltip title="Click to Sign Out" placement="bottom" arrow>
+                    <div className="username" onClick={
+                        (e) => {
+                            e.preventDefault()
+                            localStorage.removeItem('token')
+                            localStorage.removeItem('cart')
+                            navigate('/loginpage')
+                        }
+                    }><span>{props.username}</span><ThemeProvider theme={theme}><Avatar src="/broken-image.jpg" className={theme} Tool /></ThemeProvider></div></Tooltip>
+            </header>
         </div>
     )
 }

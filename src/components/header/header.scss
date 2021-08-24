@@ -21,7 +21,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-left: 9.5%;
+    margin-left: 13%;
 }
 span {
     margin-left: 10px;
@@ -34,13 +34,14 @@ span {
     align-items: center;
     border-radius: 3px;
     width: 40%;
+    margin-left: 2%;
 }
 .search-logo {
-    height: 14px;
+    height: 10px;
     margin-left: 20px;
 }
 .search-bar {
-    width: 600px;
+    width: 500px;
     height: 33px;
     padding-left: 10px;
     border: none;
@@ -60,6 +61,7 @@ span {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    margin-left: 2%;
 }
 
 .cart-count {
@@ -86,10 +88,25 @@ span {
     justify-content: space-around;
     align-items: center;
     cursor: pointer;
-    margin-right: -5%;
+    margin-right: 9%;
+    margin-left: -2%;;
+    // padding-left: 10%;
 }
+
+// .username > MuiAvatar-colorDefault{
+//     color: #a03037;
+//     background-color: #fcfcfc;
+// }
+
+.MuiAvatar-colorDefault {
+    color: #fafafa;
+    background-color: #bdbdbd;
+}
+
+
 .username > span{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 80%;
 }
 @media screen and (max-width: 200px) {
     .header-content{
