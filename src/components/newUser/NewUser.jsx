@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './NewUser.scss';
 import {useHistory} from "react-router-dom";
 import BookStoreService from "../../service/BookStoreService";
+import {Button, Dialog, DialogActions, DialogContent, DialogContentText} from "@material-ui/core";
 export default function NewUser() {
     let history=useHistory()
     function navigate(path) {
@@ -30,6 +31,7 @@ export default function NewUser() {
             name:name
         }
         new BookStoreService().addNewUser(submitObject).then(responseText => {
+            handleClickOpen()
             console.log("user added successfully" + JSON.stringify(responseText.data))})
             .catch(err=>{console.log(err);}
         )
@@ -76,9 +78,39 @@ export default function NewUser() {
         setmobileNumberError('Invalid Mobile Number (not greater than 10 digits)')
         setisError(true) } 
   }
-    
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
     return (
         <div className="newuser-div">
+
+                <Dialog
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="alert-dialog-title"
+                    aria-describedby="alert-dialog-description"
+                >
+                    <DialogContent>
+                        <DialogContentText id="alert-dialog-description">
+                            User Added Successfully
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={()=> {
+                            handleClose()
+                            navigate('/login')
+                        }} color="primary">
+                            Login
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+
           <form className='newuser-div-2'>
              <div className='user-form-title'>
                 <span className='title'>Signup</span>

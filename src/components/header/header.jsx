@@ -64,6 +64,7 @@ export default function Header(props) {
         },
     });
 
+
     return (
         <div className='sidebar'>
             <header class='header-content'>
@@ -75,7 +76,7 @@ export default function Header(props) {
                     <img className='search-logo' src={searchLogo} alt='searchlogo' />
                     <input type='search' placeholder='Search...' className='search-bar' />
                 </div>
-                <div className='cart-logo' onClick={() => navigate("/page3")}>
+                <div className='cart-logo' onClick={() => navigate("/cart")}>
                     <span>Cart</span>
                     <img src={cartLogo} alt='cartLogo' />
                     {
@@ -88,7 +89,7 @@ export default function Header(props) {
                             e.preventDefault()
                             localStorage.removeItem('token')
                             localStorage.removeItem('cart')
-                            navigate('/loginpage')
+                            navigate('/login')
                         }
                     }><span>{props.username}</span><ThemeProvider theme={theme}><Avatar src="/broken-image.jpg" className={theme} Tool /></ThemeProvider></div></Tooltip>
             </header>
