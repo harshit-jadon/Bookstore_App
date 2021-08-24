@@ -66,6 +66,8 @@ export default function CustomerDetails(props) {
                     </div>
                     <div>
                         <TextField style={{ margin: 8 , width: 517}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined" required/>
+                        <TextField  style={{ margin: 8, width: 250}} label="Name" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8 , width: 250}} label="Phone number" id="outlined-size-normal" variant="outlined"/>
                     </div>
                     <div>
                         <TextField  style={{ margin: 8 , width: 250}} label="city/town" id="outlined-size-normal" variant="outlined" required/>
@@ -75,12 +77,17 @@ export default function CustomerDetails(props) {
                                     value={pincode} onChange={(e)=>handlePinCode(e)}/>
                         <TextField  style={{ margin: 8, width: 250 }} label="Locality" id="outlined-size-normal" variant="outlined"
                                     value={locality} onChange={(e)=>handleLocality(e)}/>
+                        <TextField  style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8, width: 250}} label="Locality" id="outlined-size-normal" variant="outlined"/>
                     </div>
                     <div>
+                        <TextField style={{ margin: 8 , width: 517}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined"/>
                         <TextField style={{ margin: 8 , width: 517}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined"
                                    value={address} onChange={(e)=>handleAddress(e)}/>
                     </div>
                     <div>
+                        <TextField  style={{ margin: 8 , width: 250}} label="city/town" id="outlined-size-normal" variant="outlined"/>
+                        <TextField  style={{ margin: 8 , width: 250}} label="Landmark" id="outlined-size-normal" variant="outlined"/>
                         <TextField  style={{ margin: 8 , width: 250}} label="city/town" id="outlined-size-normal" variant="outlined"
                                     value={city} onChange={(e)=>handleCity(e)}/>
                         <TextField  style={{ margin: 8 , width: 250}} label="Landmark" id="outlined-size-normal" variant="outlined"
