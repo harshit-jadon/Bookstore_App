@@ -20,7 +20,7 @@ export default function LastPage() {
                  
             </div>
             <div className='confirm-message'>
-                <p className='confirm-message-p'>hurray!!! your order is confirmed the order is #123456 save the order id for further communication.</p>
+                <p className='confirm-message-p'>hurray!!! your order is confirmed. we will deliver your order within 2-3 days...THANK YOU...</p>
             </div>
            <table className='table-content'>
                 <tr className='table-head'>

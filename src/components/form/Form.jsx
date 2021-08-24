@@ -55,7 +55,7 @@ export default function Form() {
              </div>
              <div className='details-lp-div'>
                 <label>Username</label>
-                <input className='input-lp' type="text" placeholder='Email Adrress / PhoneNumber'
+                <input className='input-lp' type="text" placeholder='Email Adrress'
                 value={email} onChange={(e)=>emailChange(e)}/>
                 <error-output className="text-error" htmlFor="email">{emailError}</error-output>
               </div>
@@ -64,10 +64,10 @@ export default function Form() {
                 <input className='input-lp password-lp' type='password' placeholder='Password'
                 value={password} onChange={(e)=>passwordChange(e)}/>
               </div>
-              <div className='details-lp-div2'>
+              {/* <div className='details-lp-div2'>
                 <input type='radio'/><span>Remember me</span>
               </div>
-              <div className='details-lp-div2'><a href=''><span>Forgot Password</span></a></div>
+              <div className='details-lp-div2'><a href=''><span>Forgot Password</span></a></div> */}
               <div className='button-lp-div'>
                 <button className='login-lp-button' onClick={(e)=>login(e)}>Login</button>
                 <span className='or-lp'> or </span>

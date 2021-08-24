@@ -12,6 +12,8 @@ export default function CustomerDetails(props) {
     const [city,setCity]=useState('');
     const [landmark,setLandmark]=useState('');
 
+    const [pincodeError,setpincodeError]=useState('');
+    const [isError,setisError]=useState(false);
 
     const handleName=(e)=>{
         setName(e.target.value)
@@ -21,6 +23,13 @@ export default function CustomerDetails(props) {
     }
     const handlePinCode=(e)=>{
         setPinCode(e.target.value)
+        const nameRegex = RegExp('^[0-9]{1}[0-9\\s]{5,5}$');
+        if(nameRegex.test(e.target.value)){
+            setpincodeError('')
+          setisError(false)
+        }else{
+            setpincodeError('pincode is not available')
+          setisError(true) } 
     }
     const handleLocality=(e)=>{
         setLocality(e.target.value)
@@ -61,33 +70,18 @@ export default function CustomerDetails(props) {
                         <TextField  style={{ margin: 8 , width: 250}} label="Phone number" id="outlined-size-normal" variant="outlined" value={props.user.mobile} required/>
                     </div>
                     <div>
-                        <TextField  style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined" required/>
-                        <TextField  style={{ margin: 8, width: 250 }} label="Locality" id="outlined-size-normal" variant="outlined" required/>
-                    </div>
-                    <div>
-                        <TextField style={{ margin: 8 , width: 517}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined" required/>
-                        <TextField  style={{ margin: 8, width: 250}} label="Name" id="outlined-size-normal" variant="outlined"/>
-                        <TextField  style={{ margin: 8 , width: 250}} label="Phone number" id="outlined-size-normal" variant="outlined"/>
-                    </div>
-                    <div>
-                        <TextField  style={{ margin: 8 , width: 250}} label="city/town" id="outlined-size-normal" variant="outlined" required/>
-                        <TextField  style={{ margin: 8 , width: 250}} label="Landmark" id="outlined-size-normal" variant="outlined" required/>
-
-                        <TextField  style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined"
+                        <TextField  htmlFor="pincode" style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined"
                                     value={pincode} onChange={(e)=>handlePinCode(e)}/>
+                             <error-output className="text-error" htmlFor="pincode">{pincodeError}</error-output>
+                            
                         <TextField  style={{ margin: 8, width: 250 }} label="Locality" id="outlined-size-normal" variant="outlined"
                                     value={locality} onChange={(e)=>handleLocality(e)}/>
-                        <TextField  style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined"/>
-                        <TextField  style={{ margin: 8, width: 250}} label="Locality" id="outlined-size-normal" variant="outlined"/>
                     </div>
                     <div>
-                        <TextField style={{ margin: 8 , width: 517}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined"/>
                         <TextField style={{ margin: 8 , width: 517}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined"
                                    value={address} onChange={(e)=>handleAddress(e)}/>
                     </div>
                     <div>
-                        <TextField  style={{ margin: 8 , width: 250}} label="city/town" id="outlined-size-normal" variant="outlined"/>
-                        <TextField  style={{ margin: 8 , width: 250}} label="Landmark" id="outlined-size-normal" variant="outlined"/>
                         <TextField  style={{ margin: 8 , width: 250}} label="city/town" id="outlined-size-normal" variant="outlined"
                                     value={city} onChange={(e)=>handleCity(e)}/>
                         <TextField  style={{ margin: 8 , width: 250}} label="Landmark" id="outlined-size-normal" variant="outlined"
