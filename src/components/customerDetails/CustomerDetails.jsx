@@ -61,6 +61,16 @@ export default function CustomerDetails(props) {
                         <TextField  style={{ margin: 8 , width: 250}} label="Phone number" id="outlined-size-normal" variant="outlined" value={props.user.mobile} required/>
                     </div>
                     <div>
+                        <TextField  style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined" required/>
+                        <TextField  style={{ margin: 8, width: 250 }} label="Locality" id="outlined-size-normal" variant="outlined" required/>
+                    </div>
+                    <div>
+                        <TextField style={{ margin: 8 , width: 517}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined" required/>
+                    </div>
+                    <div>
+                        <TextField  style={{ margin: 8 , width: 250}} label="city/town" id="outlined-size-normal" variant="outlined" required/>
+                        <TextField  style={{ margin: 8 , width: 250}} label="Landmark" id="outlined-size-normal" variant="outlined" required/>
+
                         <TextField  style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined"
                                     value={pincode} onChange={(e)=>handlePinCode(e)}/>
                         <TextField  style={{ margin: 8, width: 250 }} label="Locality" id="outlined-size-normal" variant="outlined"
