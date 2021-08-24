@@ -81,7 +81,7 @@ export default function NewUser() {
         <div className="newuser-div">
           <form className='newuser-div-2'>
              <div className='user-form-title'>
-                <span className='title'>Welcome to BookCart New User</span>
+                <span className='title'>Signup</span>
              </div>
              <div className='user-details-div'>
                 <label htmlFor="name"> FullName</label>
@@ -110,7 +110,7 @@ export default function NewUser() {
               <div className='user-button-div'>
                 <button className='login-lp-button' onClick={(e)=>submit(e)}>Sign Up</button>
                 <span className='or-lp'> or </span>
-                <button className='login-lp-button facebook-lp' onClick={()=>navigate('/loginpage')}>Existing User! Login in</button>
+                <button className='login-lp-button facebook-lp' onClick={()=>navigate('/login')}>Existing User! Login in</button>
               </div>
            </form>
         </div>

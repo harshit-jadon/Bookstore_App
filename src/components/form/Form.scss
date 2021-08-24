@@ -1,11 +1,10 @@
-
 .form-lp-div-2{
     background-color: #FFFFFF;
     margin: 15%;
     margin-left: 25%;
     border-radius: 30px;
     width:50%;
-    box-shadow: 15px 5px 10px 5px #E2E2E2;
+    box-shadow: 15px 5px 10px 5px #A03037;
 }
 .form-lp-div-2:hover{
     transform: scale(1.1);
@@ -42,7 +41,7 @@
     letter-spacing: 2px;
 }
 .password-lp{
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 .details-lp-div2{
     color: #A03037;
@@ -63,7 +62,7 @@
     height: 25%;
 }
 .login-lp-button{
-    background-color: rgb(251, 119, 26);
+    background-color: #A03037;
     color: #FFFFFF;
     outline:none;
     border: none;
@@ -74,12 +73,11 @@
     margin-bottom:7px;
     border-radius: 2px;
     cursor: pointer;
-    
 }
 .facebook-lp{
-    background-color:#3b5998;
+    background-color: #A03037;
     margin-bottom: 5%;
-    height: 50px;
+    height: 40px;
 }
 .or-lp{
     width:70%;
@@ -87,10 +85,11 @@
     margin-bottom:5px;
     text-align: center;
 }
-error-output{
+error-output2{
     margin-left: 10px;
     font-size: 12px;
     font-style: italic;
     color: red;
     font: normal normal bolder 12px/20px Lato;
+    margin-bottom: 20px;
 }

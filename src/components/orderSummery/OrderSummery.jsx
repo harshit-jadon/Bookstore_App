@@ -6,12 +6,12 @@ export default function MyCart(props) {
     let history=useHistory()
     function navigate(path) {
         history.push(`${path}`)
-        //hello
+
     }
     return (
         <div>
-            <div className='other-summerydiv'>
-                <div className='my-summeryordercart'>
+            <div className='border-unique-div os-div'>
+                <div className='title-unique-div'>
                     <span>Order Summery</span>
                 </div>
                 {props.isOpen &&<>
@@ -32,7 +32,7 @@ export default function MyCart(props) {
                     }
 
                 <div className='placeSummeryButton'>
-                    <button className='placed-summerybutton' onClick={()=>navigate('/orderplaced')}>checkout</button>
+                    <button className='placed-summerybutton' onClick={()=>navigate('/checkout')}>checkout</button>
                 </div>
                 </>
                 }

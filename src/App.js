@@ -16,13 +16,13 @@ function App() {
             </Route>
           <Route exact path="/bookcard" component={BookCard}>
             </Route>
-          <Route exact path='/page3' component={Page3}>
+          <Route exact path='/cart' component={Page3}>
             </Route>
-          <Route exact path="/orderplaced" component={OrderPlaced}>
+          <Route exact path="/checkout" component={OrderPlaced}>
             </Route>
-          <Route exact path ='/loginpage' component ={LoginPage}>
+          <Route exact path ='/login' component ={LoginPage}>
             </Route>
-            <Route exact path='/newuser'>
+            <Route exact path='/signup'>
               <NewUser />
             </Route>
         </Switch>
