@@ -3,6 +3,7 @@ import './Form.scss';
 import '../newUser/NewUser';
 import {useHistory} from "react-router-dom";
 import BookStoreService from "../../service/BookStoreService";
+import {Button, Dialog, DialogActions, DialogContent, DialogContentText} from "@material-ui/core";
 
 export default function Form() {
 
@@ -52,14 +53,46 @@ export default function Form() {
 
         }).then(()=>navigate('/homepage'))
 
-            .catch(err=>{console.log(err);}
+            .catch(err=>{
+                handleClickOpen()
+                console.log(err);}
             )
 
     }
 
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
     return (
            <form className='form-lp-div-2'>
-             <div className='form-lp-title'>
+               <Dialog
+                   open={open}
+                   onClose={handleClose}
+                   aria-labelledby="alert-dialog-title"
+                   aria-describedby="alert-dialog-description"
+               >
+                   <DialogContent>
+                       <DialogContentText id="alert-dialog-description">
+                           Incorrect Username or Password
+                       </DialogContentText>
+                   </DialogContent>
+                   <DialogActions>
+                       <Button onClick={()=> {
+                           handleClose()
+                       }} color="primary">
+                           close
+                       </Button>
+                   </DialogActions>
+               </Dialog>
+
+               <div className='form-lp-title'>
                 <span className='title'>Login</span>
              </div>
              <div className='details-lp-div'>
