@@ -81,3 +81,10 @@
 .input-div > .MuiFormControl-root > .MuiInputLabel-outlined{
     z-index: -999;
 }
+error-output{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+    font: normal normal bolder 12px/20px Lato;
+}

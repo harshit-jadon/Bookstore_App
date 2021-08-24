@@ -1,5 +1,6 @@
 .book-details{
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     line-height:20px;
     text-align: left;

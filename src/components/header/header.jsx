@@ -73,6 +73,7 @@ export default function Header(props) {
                     (e)=>{
                         e.preventDefault()
                         localStorage.removeItem('token')
+                        localStorage.removeItem('cart')
                         navigate('/loginpage')
                     }
                 }><Avatar src="/broken-image.jpg" /><span>{props.username}</span></div>
