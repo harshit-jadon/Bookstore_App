@@ -43,7 +43,8 @@ export default function CustomerDetails(props) {
     const handleLandmark=(e)=>{
         setLandmark(e.target.value)
     }
-    const submitAddress = () => {
+    const submitAddress = (e) => {
+        e.preventDefault()
       let object={
           "city":city,
           "landmark":landmark,
@@ -63,7 +64,10 @@ export default function CustomerDetails(props) {
                 <span>Customer Details</span>
             </div>
             {props.isOpen &&
-            <>
+            <form onSubmit={(e)=> {
+                submitAddress(e);
+                props.openSummary(true)
+            }}>
                 <div className='input-div'>
                 <div>
                         <TextField  style={{ margin: 8, width: 250 }} label="Name" id="outlined-size-normal" variant="outlined" value={props.user.name} required/>
@@ -73,24 +77,24 @@ export default function CustomerDetails(props) {
                     </div>
                     <div>
                         <TextField  htmlFor="pincode" style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined"
-                                    value={pincode} onChange={(e)=>handlePinCode(e)}/>
+                                    value={pincode} onChange={(e)=>handlePinCode(e)} required/>
                             <error-outputt className="text-error" htmlFor="pincode">{pincodeError}</error-outputt>
                             
                         <TextField  style={{ margin: 8, width: 250 }} label="Locality" id="outlined-size-normal" variant="outlined"
-                                    value={locality} onChange={(e)=>handleLocality(e)}/>
+                                    value={locality} onChange={(e)=>handleLocality(e)} required/>
                                     <error-outputt className="text-error" htmlFor="locality">{}</error-outputt>
                     </div>
                     <div>
                         <TextField style={{ margin: 8 , width: 525}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined"
-                                   value={address} onChange={(e)=>handleAddress(e)}/>
+                                   value={address} onChange={(e)=>handleAddress(e)} required/>
                                    <error-outputt className="text-error" htmlFor="address">{}</error-outputt>
                     </div>
                     <div>
                         <TextField  style={{ margin: 8 , width: 250}} label="city/town" id="outlined-size-normal" variant="outlined"
-                                    value={city} onChange={(e)=>handleCity(e)}/>
+                                    value={city} onChange={(e)=>handleCity(e)} required/>
                                     <error-outputt className="text-error" htmlFor="city">{}</error-outputt>
                         <TextField  style={{ margin: 8 , width: 250}} label="Landmark" id="outlined-size-normal" variant="outlined"
-                                    value={landmark} onChange={(e)=>handleLandmark(e)}/>
+                                    value={landmark} onChange={(e)=>handleLandmark(e)} required/>
                                     <error-outputt className="text-error" htmlFor="city">{}</error-outputt>
                     </div>
                 </div>
@@ -98,7 +102,7 @@ export default function CustomerDetails(props) {
                     <div>
                         <span className='type'>Type</span>
                     </div>
-                    <div className='radio' required>
+                    <div className='radio'>
                         <div>
                             <input type="radio" checked="checked" name="radio"/>
                             <label>Home</label>
@@ -115,12 +119,9 @@ export default function CustomerDetails(props) {
                 </div>
 
                 <div className='placeButton-cd'>
-                <button className='placed-button-cd' onClick={()=> {
-                    props.openSummary(true)
-                    submitAddress();
-                }}>continue</button>
+                <button  type='submit' className='placed-button-cd'>continue</button>
                 </div>
-            </>
+            </form>
             }
         </div>
     )

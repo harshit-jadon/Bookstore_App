@@ -111,7 +111,7 @@ export default function NewUser() {
                     </DialogActions>
                 </Dialog>
 
-          <form className='newuser-div-2'>
+          <form className='newuser-div-2' onSubmit={(e)=>submit(e)}>
              <div className='user-form-title'>
                 <span className='title'>Signup</span>
              </div>
@@ -140,7 +140,7 @@ export default function NewUser() {
                 <error-output className="text-error" htmlFor="phoneNumber">{mobileNumberError}</error-output>
               </div>
               <div className='user-button-div'>
-                <button className='login-lp-button' onClick={(e)=>submit(e)}>Sign Up</button>
+                <button type='submit' className='login-lp-button'>Sign Up</button>
                 <span className='or-lp'> or </span>
                 <button className='login-lp-button facebook-lp' onClick={()=>navigate('/login')}>Existing User! Login in</button>
               </div>
