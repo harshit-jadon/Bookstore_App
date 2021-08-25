@@ -1,30 +1,33 @@
 import React from 'react'
 import './OrderSummery.scss';
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import BookStoreService from "../../service/BookStoreService";
 
 export default function MyCart(props) {
-    let history=useHistory()
+    let history = useHistory()
     function navigate(path) {
         history.push(`${path}`)
 
     }
-    function orderSubmit(e){
+    function orderSubmit(e) {
         e.preventDefault()
 
-        let object={
-             id:JSON.parse(localStorage.getItem("cart")).map(book=> book.id),
-            username:props.username
+        let object = {
+            id: JSON.parse(localStorage.getItem("cart")).map(book => book.id),
+            username: props.username
         }
         console.log(object)
         new BookStoreService().postOrder(object).then(responseText => {
             console.log("order placed" + JSON.stringify(responseText.data.token))
             localStorage.removeItem("cart")
-        }).then(()=>navigate('/checkout'))
-            .catch(err=>{
-                console.log(err);}
+        }).then(() => navigate('/checkout'))
+            .catch(err => {
+                console.log(err);
+            }
             )
     }
+
+    var totalPrice = JSON.parse(localStorage.getItem("cart")).map(book => book.price).reduce((a, b) => a + b);
 
     return (
         <div>
@@ -32,12 +35,12 @@ export default function MyCart(props) {
                 <div className='title-unique-div'>
                     <span>Order Summery</span>
                 </div>
-                {props.isOpen &&<>
-                {
-                        JSON.parse(localStorage.getItem("cart")).map((book)=>(
+                {props.isOpen && <>
+                    {
+                        JSON.parse(localStorage.getItem("cart")).map((book) => (
                             <div className='cart-summerydetails'>
                                 <div>
-                                    <img src={book.image} alt='bookpic' className="card-summeryimg"/>
+                                    <img src={book.image} alt='bookpic' className="card-summeryimg" />
                                 </div>
 
                                 <div className='book-summerydetails'>
@@ -49,9 +52,10 @@ export default function MyCart(props) {
                         ))
                     }
 
-                <div className='placeSummeryButton'>
-                    <button className='placed-summerybutton' onClick={(e)=>orderSubmit(e)}>checkout</button>
-                </div>
+                    <div className='placeSummeryButton'>
+                        <div className="total-price">Total Amount: <span>Rs. {totalPrice}</span></div>
+                        <button className='placed-summerybutton' onClick={(e) => orderSubmit(e)}>checkout</button>
+                    </div>
                 </>
                 }
             </div>

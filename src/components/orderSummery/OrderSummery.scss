@@ -36,11 +36,13 @@
     color: #0A0102;
 }
 
-.placeSummeryButton{
+.placeSummeryButton {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    text-align: center;
     margin-right: 50px;
     margin-bottom: 30px;
+    padding-top: 5%;
 }
 
 .placed-summerybutton{
@@ -61,3 +63,14 @@
     margin-bottom: 100px;
 }
 
+.total-price{
+    display: flex;
+    text-align: center;
+    font: normal normal bold 14px/17px Lato;
+    font-size: large;
+    color: #0A0102;
+    text-align: center;
+    margin-left: 40%;
+    padding-top: .9%;
+
+}
