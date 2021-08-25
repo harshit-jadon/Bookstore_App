@@ -34,8 +34,14 @@ export default function LastPage() {
                     <td class='td-address'>New Delhi</td>
                 </tr>
             </table>      
-            <div className='placeLPButton'>
-                <button className='placed-LPbutton' onClick={()=>navigate('/homepage')}>Continue Shopping</button>
+            <div className="placeLPButton os-div2" onClick={
+                        (e) => {
+                            e.preventDefault()
+                            localStorage.removeItem('cart')
+                            navigate('/homepage')
+                        }
+                    }>
+                        <button className='placed-LPbutton os-div2' onClick={()=>navigate('/homepage')}>Continue Shopping</button>
             </div>
     
         </div>

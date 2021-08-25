@@ -6,13 +6,12 @@
  }
 .successfully-content{
      text-align: center;
-     margin-top: 5%;
+     margin-top: 3%;
  }
  .message-div{
     font: normal normal bold 30px/40px Lato;
     text-transform: capitalize;
     opacity: 1;
-
      transform: translate(0%, -240%);
  }
 
@@ -88,4 +87,7 @@ td{
     margin-top: 2.5%;
     margin-bottom: 3%;
     letter-spacing: 1.5px;
+}
+.os-div2{
+    margin-bottom: 48px;
 }

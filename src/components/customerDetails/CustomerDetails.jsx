@@ -67,25 +67,31 @@ export default function CustomerDetails(props) {
                 <div className='input-div'>
                 <div>
                         <TextField  style={{ margin: 8, width: 250 }} label="Name" id="outlined-size-normal" variant="outlined" value={props.user.name} required/>
+                        <error-outputt className="text-error" htmlFor="name">{}</error-outputt>
                         <TextField  style={{ margin: 8 , width: 250}} label="Phone number" id="outlined-size-normal" variant="outlined" value={props.user.mobile} required/>
+                        <error-outputt className="text-error" htmlFor="number">{}</error-outputt>
                     </div>
                     <div>
                         <TextField  htmlFor="pincode" style={{ margin: 8 , width: 250}} label="Pincode" id="outlined-size-normal" variant="outlined"
                                     value={pincode} onChange={(e)=>handlePinCode(e)}/>
-                             <error-output className="text-error" htmlFor="pincode">{pincodeError}</error-output>
+                            <error-outputt className="text-error" htmlFor="pincode">{pincodeError}</error-outputt>
                             
                         <TextField  style={{ margin: 8, width: 250 }} label="Locality" id="outlined-size-normal" variant="outlined"
                                     value={locality} onChange={(e)=>handleLocality(e)}/>
+                                    <error-outputt className="text-error" htmlFor="locality">{}</error-outputt>
                     </div>
                     <div>
-                        <TextField style={{ margin: 8 , width: 517}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined"
+                        <TextField style={{ margin: 8 , width: 525}}   label="Address" id="standard-multiline-static" multiline rows={4} variant="outlined"
                                    value={address} onChange={(e)=>handleAddress(e)}/>
+                                   <error-outputt className="text-error" htmlFor="address">{}</error-outputt>
                     </div>
                     <div>
                         <TextField  style={{ margin: 8 , width: 250}} label="city/town" id="outlined-size-normal" variant="outlined"
                                     value={city} onChange={(e)=>handleCity(e)}/>
+                                    <error-outputt className="text-error" htmlFor="city">{}</error-outputt>
                         <TextField  style={{ margin: 8 , width: 250}} label="Landmark" id="outlined-size-normal" variant="outlined"
                                     value={landmark} onChange={(e)=>handleLandmark(e)}/>
+                                    <error-outputt className="text-error" htmlFor="city">{}</error-outputt>
                     </div>
                 </div>
                 <div className='radioDiv'>
