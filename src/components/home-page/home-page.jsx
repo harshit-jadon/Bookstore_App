@@ -12,7 +12,8 @@ class HomePage extends React.Component {
         this.state = {
             bookData: [],
             refresh1:false,
-            userData:''
+            userData:'',
+            permData:[]
         };
         this.bookStoreService = new BookStoreService();
     }
@@ -22,7 +23,8 @@ class HomePage extends React.Component {
 
                 let responseData = responseDTO;
                 console.log("Data received after GET Call :\n" + responseData.data);
-                this.setState({ bookData: responseData.data },()=>console.log(this.state.bookData));
+                this.setState({ bookData: responseData.data,permData:responseData.data },
+                    ()=>console.log(this.state.bookData));
             }).catch(errror => {
                 console.log("Error while fetching Book List\nError : " + JSON.stringify(errror));
             })
@@ -44,10 +46,9 @@ class HomePage extends React.Component {
     getUser = () => {
         this.bookStoreService.getUser()
             .then(responseDTO => {
-
                 let responseData = responseDTO;
                 console.log("Data received after GET Call :\n" + responseData.data.name);
-                this.setState({ userData: responseData.data });
+                this.setState({ userData: responseData.data});
             }).then(()=>{
             return this.state.userData
         }).catch(errror => {
@@ -58,7 +59,10 @@ class HomePage extends React.Component {
     render() {
         return (
             <>
-                <Header refresh={this.state.refresh1} stopRefresh={()=>this.stopPage()} username={this.state.userData.name}/>
+                <Header refresh={this.state.refresh1}
+                        search={(value)=>this.searchBook(value)}
+                        stopRefresh={()=>this.stopPage()}
+                        username={this.state.userData.name}/>
                 <div className="books-sort">
                     <h3 className="heading">Books<span className="book-count">({this.state.bookData.length} Items)</span></h3>
                     {/* <select className="sort-box">
@@ -75,6 +79,32 @@ class HomePage extends React.Component {
                 <Foot />
             </>
         )
+    }
+
+    searchBook(value) {
+        console.log(value)
+        if(value.length>3){
+            console.log(
+                this.state.bookData.filter(book=> {
+                    if(book.title.includes(value))
+                        return book
+                })
+            )
+            this.setState(
+                {
+                    bookData:this.state.bookData.filter(book=> {
+                        if(book.title.toLowerCase().includes(value.toLowerCase()))
+                            return book
+                    })
+                }
+            )
+
+        }
+        else if(value.length <= 3){
+            this.setState({
+                bookData:this.state.permData
+            })
+        }
     }
 }
 

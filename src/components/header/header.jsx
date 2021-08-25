@@ -64,6 +64,13 @@ export default function Header(props) {
         },
     });
 
+    const [search,setSearch]=useState('')
+
+    function searchChange(e) {
+        e.preventDefault()
+        setSearch(e.target.value)
+        props.search(search)
+    }
 
     return (
         <div className='sidebar'>
@@ -74,7 +81,8 @@ export default function Header(props) {
                 </div>
                 <div className='anchor'>
                     <img className='search-logo' src={searchLogo} alt='searchlogo' />
-                    <input type='search' placeholder='Search...' className='search-bar' />
+                    <input type='search' placeholder='Search...' className='search-bar' value={search}
+                           onChange={(e)=>searchChange(e)} />
                 </div>
                 <div className='cart-logo' onClick={() => navigate("/cart")}>
                     <span>Cart</span>
