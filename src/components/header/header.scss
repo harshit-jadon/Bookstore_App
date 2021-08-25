@@ -1,3 +1,9 @@
+.sidebar {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0; 
+    z-index: 999;
+}
 .header-content {
     display: flex;
     flex-direction: row;
@@ -8,11 +14,6 @@
     width: 100%;
     z-index:9999;
     flex: 1;
-}
-.sidebar {
-    position: -webkit-sticky; 
-    position: sticky;
-    top: 0; 
 }
 .logo-bookstore {
     font: normal normal normal 22px/26px Roboto;
