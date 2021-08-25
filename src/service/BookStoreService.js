@@ -20,4 +20,7 @@ export default class BookStoreService{
     patchAddress(address){
         return AxiosService.patch(`${this.baseUrl}/component`,address)
     }
+    postOrder(data){
+        return AxiosService.postOrder(`${this.baseUrl}/order`,data)
+    }
 }
