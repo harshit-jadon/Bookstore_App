@@ -1,6 +1,7 @@
 import React from 'react'
 import './OrderSummery.scss';
 import {useHistory} from "react-router-dom";
+import BookStoreService from "../../service/BookStoreService";
 
 export default function MyCart(props) {
     let history=useHistory()
@@ -8,6 +9,23 @@ export default function MyCart(props) {
         history.push(`${path}`)
 
     }
+    function orderSubmit(e){
+        e.preventDefault()
+
+        let object={
+             id:JSON.parse(localStorage.getItem("cart")).map(book=> book.id),
+            username:props.username
+        }
+        console.log(object)
+        new BookStoreService().postOrder(object).then(responseText => {
+            console.log("order placed" + JSON.stringify(responseText.data.token))
+            localStorage.removeItem("cart")
+        }).then(()=>navigate('/checkout'))
+            .catch(err=>{
+                console.log(err);}
+            )
+    }
+
     return (
         <div>
             <div className='border-unique-div os-div'>
@@ -32,7 +50,7 @@ export default function MyCart(props) {
                     }
 
                 <div className='placeSummeryButton'>
-                    <button className='placed-summerybutton' onClick={()=>navigate('/checkout')}>checkout</button>
+                    <button className='placed-summerybutton' onClick={(e)=>orderSubmit(e)}>checkout</button>
                 </div>
                 </>
                 }

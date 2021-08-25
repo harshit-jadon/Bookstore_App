@@ -47,7 +47,7 @@ class Page3 extends React.Component{
             <Header refresh={this.state.refresh1} stopRefresh={()=>this.stopPage()} username={this.state.userData.name}/>
             <MyCart openAddress={(value)=>this.setOpenAddress(value)} refresh_1={()=>this.refresh()}/>
             <OrderDetails isOpen={this.state.openAddress} openSummary={(value)=>this.setOpenSummery(value)} user={this.state.userData}/>
-            <OrderSummery isOpen={this.state.openSummary}/>
+            <OrderSummery isOpen={this.state.openSummary} username={this.state.userData.name}/>
             <Footer />
         </>
         );

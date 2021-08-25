@@ -13,5 +13,8 @@ class AxiosService {
     return axios.patch(url,payload,{headers:{'authorization':`Bearer ${localStorage.getItem('token')}`,
       }})
   }
+  postOrder(url='', payload = null){
+    return axios.post(url, payload,{headers:{'content-type':'application/json','authorization':`Bearer ${localStorage.getItem('token')}`}})
+  }
 }
 module.exports = new AxiosService();

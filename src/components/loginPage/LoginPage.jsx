@@ -5,6 +5,7 @@ import Form from '../form/Form';
 
 
 class LoginPage extends React.Component{
+
     render(){
         return(
           <div className='body-lp-div'>
